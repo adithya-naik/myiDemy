@@ -19,7 +19,8 @@ const PORT = 5000;
 connectDB().then(() => {
 
   app.listen(PORT, () => {
-    console.log(`\n\n\n⚡ Server is running at Port no : ${PORT}\n\n`)
+    console.log("\n\n\n--Start")
+    console.log(`\n⚡ Server is running at Port no : ${PORT}\n\n`)
   })
 
 })
