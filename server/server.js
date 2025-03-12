@@ -15,8 +15,7 @@ app.use("/api/auth", authRouter)
 app.use("/api/form", contactRouter)
 
 
-
-const PORT = 5000;
+const PORT = process.env.PORT;
 
 connectDB().then(() => {
 
@@ -25,4 +24,5 @@ connectDB().then(() => {
     console.log(`\n⚡ Server is running at Port no : ${PORT}\n\n`)
   })
 
+  
 })
