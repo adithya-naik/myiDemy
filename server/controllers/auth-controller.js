@@ -4,6 +4,7 @@
 const User = require("../models/user-schema")
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { validationResult } = require("express-validator");
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -15,11 +16,22 @@ const home = async (req, res) => {
   }
 }
 
+
+
+
+
 // all mongo db queries should have await 
 
 const register = async (req, res) => {
+  const errors = validationResult(req);
+   // If there are validation errors, return them
+   if (!errors.isEmpty()) {
+    return res.status(400).json({ 
+      success: false,
+      errors: errors.array()
+    });
+  }
   try {
-
     const data = req.body;
     console.log(data)
 
@@ -60,7 +72,61 @@ const register = async (req, res) => {
 }
 
 
-module.exports = { home, register }
+
+
+// user login logic
+
+const login = async (req, res) => {
+  const errors = validationResult(req);
+
+    // If there are validation errors, return them
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ 
+        success: false,
+        errors: errors.array()
+      });
+    }
+  try {
+    // email & password
+    const data = req.body;
+    console.log(data)
+    // this will return the complete data for that particualr ID
+    const userExists = await User.findOne({ email: data.email })
+
+    if (!userExists) {
+      return res.status(400).send({ msg: "Invalid Credentials" })
+    }
+
+    // comapre password
+
+    const validUser = await bcrypt.compare(data.password, userExists.password);
+
+    if (validUser) {
+      // JWT for token creation (Generate JWT token)
+      const token = jwt.sign(
+        { id: userExists._id.toString() },
+        JWT_SECRET,
+        { expiresIn: "7d" } // Token expires in 7 days
+      );
+
+      res.status(201).json({
+        msg: "User Login Successfully",
+        token,
+        userId: userExists._id.toString()
+      });
+    }
+    else {
+      // 401 Unauthorized Error
+      res.status(401).json({ msg: "Invalid Email/Password" })
+    }
+
+  } catch (error) {
+    res.status(400).send({ msg: "Page not Found Here in the server !!" })
+  }
+}
+
+
+module.exports = { home, register, login }
 
 
 
