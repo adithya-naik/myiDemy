@@ -6,6 +6,7 @@ import Services from "./pages/Services"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
       </Routes>
+      <Footer ></Footer>
     </Router>
     </>
   )
