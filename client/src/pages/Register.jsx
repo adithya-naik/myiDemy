@@ -29,14 +29,14 @@ const Register = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       {/* Left Column - Image */}
-      <div className="hidden md:flex w-1/2 bg-blue-50 items-center justify-center">
+      <div className="hidden md:flex w-1/2  items-center justify-center">
         <div className="max-w-lg p-12">
           <h1 className="text-3xl font-bold text-blue-800 mb-6">Join our community</h1>
-          <p className="text-gray-600 mb-8">Create an account to access exclusive courses, personalized learning paths, and connect with instructors worldwide.</p>
+          <p className="text-gray-600 mb-2">Create an account to access exclusive courses, personalized learning paths, and connect with instructors worldwide.</p>
           <img 
             src="https://media.istockphoto.com/vectors/registration-abstract-concept-vector-illustration-vector-id1305268276?k=20&m=1305268276&s=170667a&w=0&h=nL3GU92O6abaz4kbbjUIUIwYZKS7048R-U5He99LmQY=" 
             alt="Register illustration" 
-            className="w-full rounded-lg shadow-lg" 
+            className="w-full rounded-lg " 
           />
         </div>
       </div>

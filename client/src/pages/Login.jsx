@@ -27,14 +27,14 @@ const Login = () => {
   return (
     <div className="flex min-h-screen bg-gray-50">
       {/* Left Column - Image */}
-      <div className="hidden md:flex w-1/2 bg-blue-50 items-center justify-center">
+      <div className="hidden md:flex w-1/2  items-center justify-center">
         <div className="max-w-lg p-12">
           <h1 className="text-3xl font-bold text-blue-800 mb-6">Welcome Back</h1>
-          <p className="text-gray-600 mb-8">Log in to access your personalized dashboard, continue your courses, and track your learning progress.</p>
+          <p className="text-gray-600 mb-2">Log in to access your personalized dashboard, continue your courses, and track your learning progress.</p>
           <img 
             src="https://static.vecteezy.com/system/resources/previews/001/991/652/original/sign-in-page-flat-design-concept-illustration-icon-account-login-user-login-abstract-metaphor-can-use-for-landing-page-mobile-app-ui-posters-banners-free-vector.jpg" 
             alt="Login illustration" 
-            className="w-full rounded-lg shadow-lg" 
+            className="w-full rounded-lg" 
           />
         </div>
       </div>
