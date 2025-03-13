@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white sticky top-0 py-4 px-6 shadow-sm z-50">
       <div className="container mx-auto flex justify-between items-center">
-        <NavLink to="/" className="text-2xl font-bold text-blue-600">myidemy</NavLink>
+        <NavLink to="/" className="text-2xl font-bold text-blue-600">myiDemy</NavLink>
 
         {/* Mobile menu button */}
         <button 
