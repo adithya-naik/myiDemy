@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { User, Mail, Phone, Lock, Eye, EyeOff } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { Link,useNavigate } from "react-router-dom";
 const Register = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -9,19 +8,46 @@ const Register = () => {
     phone: "",
     password: "",
   });
-  
+
+const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Registering user:", formData);
-    // Send data to backend API
+  
+    try {
+      console.log("Data being sent:", JSON.stringify(formData));
+  
+      const response = await fetch("http://localhost:3000/api/auth/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json(); // Ensure response is read properly
+  
+      if (response.ok) {
+        navigate("/login")
+        setFormData({
+          username: "",
+          email: "",
+          phone: "",
+          password: "",
+        });
+        console.log("User registered successfully:", data);
+      } else {
+        console.error("Registration failed:", data.message || "Unknown error");
+      }
+    } catch (error) {
+      console.error("Error during registration:", error.message);
+    }
   };
-
+  
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -31,12 +57,17 @@ const Register = () => {
       {/* Left Column - Image */}
       <div className="hidden md:flex w-1/2  items-center justify-center">
         <div className="max-w-lg p-12">
-          <h1 className="text-3xl font-bold text-blue-800 mb-6">Join our community</h1>
-          <p className="text-gray-600 mb-2">Create an account to access exclusive courses, personalized learning paths, and connect with instructors worldwide.</p>
-          <img 
-            src="https://media.istockphoto.com/vectors/registration-abstract-concept-vector-illustration-vector-id1305268276?k=20&m=1305268276&s=170667a&w=0&h=nL3GU92O6abaz4kbbjUIUIwYZKS7048R-U5He99LmQY=" 
-            alt="Register illustration" 
-            className="w-full rounded-lg " 
+          <h1 className="text-3xl font-bold text-blue-800 mb-6">
+            Join our community
+          </h1>
+          <p className="text-gray-600 mb-2">
+            Create an account to access exclusive courses, personalized learning
+            paths, and connect with instructors worldwide.
+          </p>
+          <img
+            src="https://media.istockphoto.com/vectors/registration-abstract-concept-vector-illustration-vector-id1305268276?k=20&m=1305268276&s=170667a&w=0&h=nL3GU92O6abaz4kbbjUIUIwYZKS7048R-U5He99LmQY="
+            alt="Register illustration"
+            className="w-full rounded-lg "
           />
         </div>
       </div>
@@ -44,9 +75,13 @@ const Register = () => {
       {/* Right Column - Form */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center px-6">
         <div className="max-w-md w-full">
-          <h2 className="text-3xl font-bold mb-2 text-gray-800">Create Account</h2>
-          <p className="text-gray-600 mb-8">Please fill in the details to register</p>
-          
+          <h2 className="text-3xl font-bold mb-2 text-gray-800">
+            Create Account
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Please fill in the details to register
+          </p>
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -62,7 +97,7 @@ const Register = () => {
                 required
               />
             </div>
-            
+
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Mail className="h-5 w-5 text-gray-400" />
@@ -77,7 +112,7 @@ const Register = () => {
                 required
               />
             </div>
-            
+
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Phone className="h-5 w-5 text-gray-400" />
@@ -92,7 +127,7 @@ const Register = () => {
                 required
               />
             </div>
-            
+
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <Lock className="h-5 w-5 text-gray-400" />
@@ -118,19 +153,22 @@ const Register = () => {
                 )}
               </button>
             </div>
-            
-            <button 
-              type="submit" 
+
+            <button
+              type="submit"
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Create Account
             </button>
           </form>
-          
+
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Already have an account?{" "}
-              <Link to="/login" className="text-blue-600 font-medium hover:underline">
+              <Link
+                to="/login"
+                className="text-blue-600 font-medium hover:underline"
+              >
                 Sign In
               </Link>
             </p>

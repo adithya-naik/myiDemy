@@ -25,12 +25,17 @@ const home = async (req, res) => {
 const register = async (req, res) => {
   const errors = validationResult(req);
    // If there are validation errors, return them
-   if (!errors.isEmpty()) {
+   console.log("Validation errors:", errors.array());
+  console.log("Raw password from request:", req.body.password);
+  
+  // If there are validation errors, return them
+  if (!errors.isEmpty()) {
     return res.status(400).json({ 
       success: false,
       errors: errors.array()
     });
   }
+  
   try {
     const data = req.body;
     console.log(data)
@@ -109,7 +114,7 @@ const login = async (req, res) => {
         { expiresIn: "7d" } // Token expires in 7 days
       );
 
-      res.status(201).json({
+      res.status(200).json({
         msg: "User Login Successfully",
         token,
         userId: userExists._id.toString()
