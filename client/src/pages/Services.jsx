@@ -509,22 +509,152 @@
 // enhanced one 
 
 
+// import { useEffect, useState } from "react";
+// import ServiceCard from "../components/ServiceCard";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
+// import { Loader2, AlertTriangle, RefreshCw } from "lucide-react";
+
+// const Services = () => {
+//   const [services, setServices] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+
+//   useEffect(() => {
+//     const fetchServices = async () => {
+//       setLoading(true);
+//       try {
+//         const response = await fetch("http://localhost:3000/api/data/service");
+//         if (!response.ok) {
+//           throw new Error("Network response was not ok");
+//         }
+//         const data = await response.json();
+//         setServices(data.response);
+//       } catch (error) {
+//         console.error("Error fetching services:", error);
+//         setError(error.message);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchServices();
+//   }, []);
+// const [isWishlisted, setIsWishlisted] = useState(false);
+//     const handleWishlist = () => {
+//       setIsWishlisted(!isWishlisted);
+//       toast.info(isWishlisted ? "Removed from wishlist" : "Added to wishlist");
+//     };
+  
+//     const handleShare = () => {
+//       navigator.clipboard.writeText(window.location.href);
+//       toast.info("Course link copied to clipboard!");
+//     };
+//   const handleEnroll = (serviceId, serviceName) => {
+//     toast.success(`Successfully enrolled in ${serviceName}!`);
+//     // Additional enrollment logic can be added here
+//   };
+
+//   if (loading) {
+//     return (
+//       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+//         <div className="text-center p-8 rounded-lg bg-white shadow-md">
+//           <Loader2 className="h-12 w-12 animate-spin text-blue-500 mx-auto mb-4" />
+//           <h2 className="text-xl font-semibold text-gray-800">Loading Courses</h2>
+//           <p className="text-gray-500 mt-2">Please wait while we fetch our latest courses...</p>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   if (error) {
+//     return (
+//       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+//         <div className="text-center p-8 rounded-lg bg-white shadow-md max-w-md w-full">
+//           <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+//           <h2 className="text-xl font-semibold text-gray-800 mb-2">Failed to Load Courses</h2>
+//           <p className="text-gray-600 mb-4">{error}</p>
+//           <button 
+//             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center mx-auto"
+//             onClick={() => window.location.reload()}
+//           >
+//             <RefreshCw className="h-4 w-4 mr-2" />
+//             Try Again
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+//       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+      
+//       <div className="max-w-7xl mx-auto">
+//         <div className="text-center mb-12">
+//           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Our Courses</h1>
+//           <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+//             Advance your career with industry-leading courses taught by experts
+//           </p>
+//         </div>
+        
+//         {services.length === 0 ? (
+//           <div className="text-center p-12 bg-white rounded-lg shadow-md">
+//             <h3 className="text-xl font-medium text-gray-500">
+//               No courses available at the moment.
+//             </h3>
+//             <p className="mt-2 text-gray-400">Please check back later for new offerings.</p>
+//           </div>
+//         ) : (
+//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//             {services.map((service) => (
+//               <ServiceCard 
+//                 key={service._id}
+//                 service={service}
+//                 onView={() => window.location.href = `/course/${service._id}`}
+//                 onEnroll={() => handleEnroll(service._id, service.service)}
+//               />
+//             ))}
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Services;
+
+
+
+
+
+// by contextAPI
+
+
+
 import { useEffect, useState } from "react";
 import ServiceCard from "../components/ServiceCard";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Loader2, AlertTriangle, RefreshCw } from "lucide-react";
+import { useCart } from "../store/cart"
 
 const Services = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  useEffect(() => {
+    document.documentElement.scrollTop = 0; // For older browsers
+    document.body.scrollTop = 0;
+}, []);
+  // Use the cart context
+  const { handleEnroll, handleWishlist, handleShare, isInWishlist, isInCart } = useCart();
 
   useEffect(() => {
     const fetchServices = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:3000/api/data/service");
+        const response = await fetch("https://myidemy.onrender.com/api/data/service");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -540,11 +670,6 @@ const Services = () => {
 
     fetchServices();
   }, []);
-
-  const handleEnroll = (serviceId, serviceName) => {
-    toast.success(`Successfully enrolled in ${serviceName}!`);
-    // Additional enrollment logic can be added here
-  };
 
   if (loading) {
     return (
@@ -603,7 +728,11 @@ const Services = () => {
                 key={service._id}
                 service={service}
                 onView={() => window.location.href = `/course/${service._id}`}
-                onEnroll={() => handleEnroll(service._id, service.service)}
+                onEnroll={() => handleEnroll(service)}
+                onWishlist={() => handleWishlist(service)}
+                onShare={() => handleShare(service)}
+                isWishlisted={isInWishlist(service._id)}
+                isInCart={isInCart(service._id)}
               />
             ))}
           </div>

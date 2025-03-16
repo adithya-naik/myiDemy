@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
     }
   
     try {
-      const response = await fetch("http://localhost:3000/api/auth/getUserDetails", {
+      const response = await fetch("https://myidemy.onrender.com/api/auth/getUserDetails", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -12,7 +12,7 @@
 //     const fetchCourseDetails = async () => {
 //       setLoading(true);
 //       try {
-//         const response = await fetch(`http://localhost:3000/api/data/service/${id}`); // Fetch service by ID
+//         const response = await fetch(`https://myidemy.onrender.com/api/data/service/${id}`); // Fetch service by ID
 //         if (!response.ok) {
 //           throw new Error("Network response was not ok");
 //         }
@@ -146,7 +146,7 @@ const CourseDetail = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:3000/api/data/service/${id}`
+          `https://myidemy.onrender.com/api/data/service/${id}`
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -855,8 +855,8 @@ const CourseDetail = () => {
                   onClick={handleWishlist}
                   lassName={`flex items-center justify-center w-1/2 mr-2 py-2 rounded-md font-medium ${
                     isWishlisted
-                      ? "bg-red-50 text-red-600 border border-red-200"
-                      : "bg-gray-50 text-gray-700 border border-gray-200"
+                ? "bg-red-50 text-red-600 border border-red-200"
+                : "bg-gray-50 text-gray-700 border border-gray-200"
                   }`}
                 >
                   <Heart

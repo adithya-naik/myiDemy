@@ -12,6 +12,7 @@ import Footer from "./components/Footer"
 import NotFound from "./components/NotFound"
 import ScrollToTop from "./components/ScrollToTop"
 import CourseDetail from "./components/CourseDetail"
+import Cart from "./pages/Cart"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
           <Route path="/logout" element={<Logout/>} />
+          <Route path="/cart" element={<Cart/>} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer />

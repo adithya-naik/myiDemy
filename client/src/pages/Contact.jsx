@@ -36,7 +36,7 @@ export default function ContactForm() {
     console.log(formData);
     
     try {
-      await fetch('http://localhost:3000/api/form/contact', {
+      await fetch('https://myidemy.onrender.com/api/form/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
