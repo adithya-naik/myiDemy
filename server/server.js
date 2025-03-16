@@ -14,7 +14,7 @@ const connectDB = require("./utils/db")
 
 // Configure cors middleware to allow all origins
 app.use(cors({
-  origin: 'https://myidemy.vercel.app/', // Allow all origins
+  origin: '*', // Allow all origins
   methods: "GET, POST, PUT, DELETE",
   credentials: true,
 }));
