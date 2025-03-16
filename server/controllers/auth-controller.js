@@ -24,18 +24,18 @@ const home = async (req, res) => {
 
 const register = async (req, res) => {
   const errors = validationResult(req);
-   // If there are validation errors, return them
-   console.log("Validation errors:", errors.array());
+  // If there are validation errors, return them
+  console.log("Validation errors:", errors.array());
   console.log("Raw password from request:", req.body.password);
-  
+
   // If there are validation errors, return them
   if (!errors.isEmpty()) {
-    return res.status(400).json({ 
+    return res.status(400).json({
       success: false,
       errors: errors.array()
     });
   }
-  
+
   try {
     const data = req.body;
     console.log(data)
@@ -84,13 +84,13 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   const errors = validationResult(req);
 
-    // If there are validation errors, return them
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ 
-        success: false,
-        errors: errors.array()
-      });
-    }
+  // If there are validation errors, return them
+  if (!errors.isEmpty()) {
+    return res.status(400).json({
+      success: false,
+      errors: errors.array()
+    });
+  }
   try {
     // email & password
     const data = req.body;
@@ -111,8 +111,9 @@ const login = async (req, res) => {
       const token = jwt.sign(
         { id: userExists._id.toString() },
         JWT_SECRET,
-        { expiresIn: "7d" } // Token expires in 7 days
+        { expiresIn: "7d" } // 7 days is a good balance
       );
+      
 
       res.status(200).json({
         msg: "User Login Successfully",
@@ -131,7 +132,47 @@ const login = async (req, res) => {
 }
 
 
-module.exports = { home, register, login }
+
+
+// for sendig teh user details to the frontend  server
+const getUserDetails = async (req, res) => {
+  try {
+    const authHeader = req.headers.authorization; // Get token from headers
+
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ message: "Unauthorized: No token provided" });
+    }
+
+    console.log("Header:", authHeader);
+
+    const token = authHeader.replace("Bearer ", "").trim(); // Remove 'Bearer ' and trim spaces
+    console.log("Token:", token);
+
+    // Verify token
+    const decoded = jwt.verify(token, process.env.JWT_SECRET); // Ensure you are using the correct secret key
+    const userId = decoded.id;
+    console.log("User ID:", userId);
+
+    // Fetch user data from DB
+    const userData = await User.findById(userId).select("-password"); // Exclude password
+
+    if (!userData) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    console.log("User Data:", userData);
+
+    res.json(userData);
+  } catch (error) {
+    console.error("Error verifying token:", error);
+    res.status(401).json({ message: "Invalid or expired token" });
+  }
+};
+
+
+
+
+module.exports = { home, register, login, getUserDetails }
 
 
 

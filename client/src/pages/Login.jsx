@@ -1,13 +1,22 @@
 import { useState } from "react";
 import { Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../store/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  
+  // Add state for validation errors
+  const [validationErrors, setValidationErrors] = useState([]);
+  
   const naviagte = useNavigate();
+
+  const { storeTokenInLS } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
@@ -27,28 +36,55 @@ const Login = () => {
         body: JSON.stringify(formData),
       });
 
-
-       // Parse the JSON response
-    const data = await response.json();
-    console.log(data); // This will show the JSON object with msg, token, and userId
-
+      // Parse the JSON response
+      const data = await response.json();
+      console.log(data); // This will show the JSON object with msg, token, and userId
 
       if (response.ok) {
-        alert("Success to login");
+        // Store token in local storage
+        storeTokenInLS(data.token);
+        toast.success("Login successful!");
+        // alert("Success to login");
         naviagte("/");
       } else {
-        alert(" Invalid Credentialss - Failed to login");
+        // Handle validation errors
+        if (data.errors && Array.isArray(data.errors)) {
+          setValidationErrors(data.errors);
+          
+          // Display each validation error as a toast
+          data.errors.forEach(err => {
+            toast.error(err.msg);
+          });
+          
+          // Create an alert with all validation errors (commented out)
+          // const errorMessages = data.errors.map(err => err.msg).join('\n');
+          // alert(`Login failed:\n${errorMessages}`);
+          
+          // Log errors to console
+          console.error("Validation errors:", data.errors);
+        } else {
+          // Handle other types of errors
+          toast.error(data.msg || "Invalid Credentials");
+          // alert(data.msg || "Invalid Credentials - Failed to login");
+          console.error("Login error:", data.msg || "Unknown error");
+        }
       }
     } catch (error) {
       console.error("Error during Login:", error.message);
+      toast.error("Error during login: " + error.message);
+      // alert("Error during login: " + error.message);
     }
   };
+  
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   return (
     <div className="flex min-h-screen bg-gray-50">
+      {/* Toast Container */}
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
+      
       {/* Left Column - Image */}
       <div className="hidden md:flex w-1/2  items-center justify-center">
         <div className="max-w-lg p-12">

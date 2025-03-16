@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import Faq from "react-faq-component";
@@ -12,12 +12,20 @@ import {
   BookOpen,
 } from "lucide-react";
 import Testimonials from "../components/Testimonials";
-
+import GreetingCard from "../components/GreetingCard";
+import { useAuth } from "../store/auth";
 // Import slider CSS
 // Note: You'll need to install these packages:
 // npm install react-slick slick-carousel react-faq-component
 
 const Home = () => {
+  const {userData} = useAuth();
+  const [greetName,setGreetName] = useState();
+  useEffect(() => {
+    if (userData && userData.username) {
+      setGreetName(userData.username);
+    }
+  }, [[userData]]);
   // Settings for testimonial slider
   const sliderSettings = {
     dots: true,
@@ -92,9 +100,10 @@ const Home = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
+      <GreetingCard name = {greetName}/>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Master Modern Development Skills with{" "}
-              <span className="text-blue-600">myidemy</span>
+              <span className="text-blue-600">myiDemy</span>
             </h1>
             <p className="text-lg text-gray-600">
               Accelerate your career with expert-led courses in web development,

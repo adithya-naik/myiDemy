@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, User, MessageSquare, Send } from "lucide-react";
+import { useAuth } from "../store/auth";
 
 export default function ContactForm() {
+  const { userData } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     message: ""
   });
+
+  useEffect(() => {
+    if (userData) {
+      setFormData(prevData => ({
+        ...prevData,
+        username: userData.username || "",
+        email: userData.email || "",
+      }));
+    }
+  }, [userData]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null);
-  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -17,35 +29,30 @@ export default function ContactForm() {
       [name]: value
     }));
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setIsSubmitting(true);
+    setIsSubmitting(true);
     console.log(formData);
     
-    // try {
-    //   const response = await fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(formData),
-    //   });
-      
-    //   if (response.ok) {
-    //     setSubmitStatus({ type: 'success', message: 'Your message has been sent successfully!' });
-    //     setFormData({ username: "", email: "", message: "" });
-    //   } else {
-    //     const error = await response.json();
-    //     setSubmitStatus({ type: 'error', message: error.message || 'Something went wrong. Please try again.' });
-    //   }
-    // } catch (error) {
-    //   setSubmitStatus({ type: 'error', message: 'Network error. Please check your connection and try again.' });
-    // } finally {
-    //   setIsSubmitting(false);
-    // }
+    try {
+      await fetch('http://localhost:3000/api/form/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      setFormData({ 
+        username: userData?.username || "", 
+        email: userData?.email || "", 
+        message: "" 
+      });
+    } catch (error) {
+      console.error("Error submitting form", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-  
+
   return (
     <section className="bg-white py-16">
       <div className="container mx-auto px-4">
@@ -122,11 +129,6 @@ export default function ContactForm() {
                 </div>
               </div>
               
-              {submitStatus && (
-              <div className={`mb-6 mt-2 p-4 rounded-md ${submitStatus.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
-                {submitStatus.message}
-              </div>
-            )}
               <div className="flex justify-center">
                 <button
                   type="submit"
@@ -138,62 +140,6 @@ export default function ContactForm() {
                 </button>
               </div>
             </form>
-          </div>
-          
-          <div className="mt-12 grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-indigo-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-gray-600">support@learningcenter.com</p>
-            </div>
-            
-            <div>
-              <div className="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-indigo-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-gray-600">+1 (555) 123-4567</p>
-            </div>
-            
-            <div>
-              <div className="bg-indigo-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-indigo-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Visit Us</h3>
-              <p className="text-gray-600">123 Tech Campus, San Francisco, CA</p>
-            </div>
-          </div>
-          
-          {/* Map Section */}
-          <div className="mt-12">
-            <div className="bg-white rounded-lg shadow overflow-hidden">
-              <div className="p-4 bg-indigo-50 border-b">
-                <h3 className="text-lg font-bold text-gray-900 flex items-center">
-                  <MapPin className="w-5 h-5 mr-2 text-indigo-600" />
-                  Our Location
-                </h3>
-              </div>
-              <div className="aspect-w-16 aspect-h-9 w-full">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.50764020075986!3d37.75781499644172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1647794935174!5m2!1sen!2sus" 
-                  className="w-full h-96 border-0"
-                  loading="lazy"
-                  title="Our Office Location"
-                  aria-label="Map showing our office location in San Francisco"
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="p-4 bg-white">
-                <p className="text-gray-700">
-                  <strong>Address:</strong> 123 Tech Campus, San Francisco, CA 94105
-                </p>
-                <p className="text-gray-600 text-sm mt-1">
-                  We're located in the heart of San Francisco's tech district, easily accessible by public transportation. Street parking is available, and we're a short walk from the Montgomery BART station.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { User, Mail, Phone, Lock, Eye, EyeOff } from "lucide-react";
-import { Link,useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../store/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import use
 const Register = () => {
   const [formData, setFormData] = useState({
     username: "",
@@ -8,8 +12,14 @@ const Register = () => {
     phone: "",
     password: "",
   });
+  
+  // Add state for validation errors
+  const [validationErrors, setValidationErrors] = useState([]);
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  const { storeTokenInLS } = useAuth();
+
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
@@ -17,10 +27,10 @@ const navigate = useNavigate();
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       console.log("Data being sent:", JSON.stringify(formData));
-  
+
       const response = await fetch("http://localhost:3000/api/auth/register", {
         method: "POST",
         headers: {
@@ -28,11 +38,14 @@ const navigate = useNavigate();
         },
         body: JSON.stringify(formData),
       });
-  
+
       const data = await response.json(); // Ensure response is read properly
-  
+
       if (response.ok) {
-        navigate("/login")
+        storeTokenInLS(data.token);
+        toast.success("Registration successful!");
+        // alert("Registration successful!");
+        navigate("/");
         setFormData({
           username: "",
           email: "",
@@ -41,19 +54,46 @@ const navigate = useNavigate();
         });
         console.log("User registered successfully:", data);
       } else {
-        console.error("Registration failed:", data.message || "Unknown error");
+        // Handle validation errors
+        console.error("Registration failed:", data);
+        
+        if (data.errors && Array.isArray(data.errors)) {
+          setValidationErrors(data.errors);
+          
+          // Display each validation error as a toast
+          data.errors.forEach(err => {
+            toast.error(err.msg);
+          });
+          
+          // Create an alert message (commented out)
+          // const errorMessages = data.errors.map(err => err.msg).join('\n');
+          // alert(`Registration failed:\n${errorMessages}`);
+          
+          // Log errors to console
+          console.error("Validation errors:", data.errors);
+        } else {
+          // Handle other types of errors
+          toast.error(data.msg || "Registration failed");
+          // alert(data.msg || "Registration failed");
+          console.error("Registration error:", data.msg || "Unknown error");
+        }
       }
     } catch (error) {
       console.error("Error during registration:", error.message);
+      toast.error("Error during registration: " + error.message);
+      // alert("Error during registration: " + error.message);
     }
   };
-  
+
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   return (
     <div className="flex min-h-screen bg-gray-50">
+      {/* Toast Container */}
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} />
+      
       {/* Left Column - Image */}
       <div className="hidden md:flex w-1/2  items-center justify-center">
         <div className="max-w-lg p-12">
@@ -179,4 +219,4 @@ const navigate = useNavigate();
   );
 };
 
-export default Register;
+export default Register;c

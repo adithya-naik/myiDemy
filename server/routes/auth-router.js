@@ -64,6 +64,7 @@ const loginValidation = [
 // when user adds his data that should be inserted into the database
 router.route("/register").post(registerValidation, authControllers.register);
 router.route("/login").post(loginValidation, authControllers.login);
+router.route("/getUserDetails").get(authControllers.getUserDetails);
 
 // dont forget this s in exports
 module.exports = router;
