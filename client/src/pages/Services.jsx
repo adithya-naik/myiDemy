@@ -359,34 +359,255 @@
 //   );
 // }
 
+
+
+
+
+
+
+
+
+// last best commit
+
+
+// import { useEffect, useState } from "react";
+// import ServiceCard from "../components/ServiceCard";
+
+// const Services = () => {
+//   const [services, setServices] = useState([]);
+//   useEffect(() => {
+//   fetch("http://localhost:3000/api/data/service") // Update with your actual API endpoint
+//     .then((response) => response.json())
+//     .then((data) => setServices(data.response)) // Extract the 'response' array
+//     .catch((error) => console.error("Error fetching courses:", error));
+// }, []);
+
+
+//   return (
+//     <div className="container mx-auto p-6">
+//       <h2 className="text-4xl p-2 font-bold text-gray-800 mb-6">Our Courses</h2>
+//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//         {services.map((service, index) => (
+//           <ServiceCard
+//             key={index}
+//             service={service.service}
+//             description={service.description}
+//             price={service.price}
+//             icon={service.icon}
+//             provider={service.provider}
+//             // providerImage={service.providerImage}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Services;
+
+
+
+
+
+
+
+
+// new logic
+
+
+// import { useEffect, useState } from "react";
+// import ServiceCard from "../components/ServiceCard";
+// import { ToastContainer, toast } from "react-toastify"; // Import ToastContainer and toast
+
+// const Services = () => {
+//   const [services, setServices] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+
+//   useEffect(() => {
+//     const fetchServices = async () => {
+//       setLoading(true);
+//       try {
+//         const response = await fetch("http://localhost:3000/api/data/service"); // Update with your actual API endpoint
+//         if (!response.ok) {
+//           throw new Error("Network response was not ok");
+//         }
+//         const data = await response.json();
+//         console.log(data.response);
+//         setServices(data.response); // Extract the 'response' array
+//       } catch (error) {
+//         console.error("Error fetching services:", error);
+//         setError(error.message);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchServices();
+//   }, []);
+
+//   const handleEnroll = (serviceId) => {
+//     // Show toast notification for enrollment
+//     toast.success("Enrolled successfully!");
+//     // You can also handle any additional logic for enrollment here
+//   };
+
+//   if (loading) {
+//     return (
+//       <div className="container mx-auto p-6 flex justify-center items-center h-64">
+//         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+//       </div>
+//     );
+//   }
+
+//   if (error) {
+//     return (
+//       <div className="container mx-auto p-6">
+//         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+//           <p>Failed to load courses: {error}</p>
+//           <button 
+//             className="mt-2 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded"
+//             onClick={() => window.location.reload()}
+//           >
+//             Try Again
+//           </button>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className="container mx-auto p-6">
+//       <ToastContainer />
+//       <h2 className="text-4xl p-2 font-bold text-gray-800 mb-6">Our Courses</h2>
+      
+//       {services.length === 0 ? (
+//         <div className="text-center py-10">
+//           <p className="text-gray-500">No courses available at the moment.</p>
+//         </div>
+//       ) : (
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//           {services.map((service) => (
+//             <ServiceCard
+//               key={service._id}
+//               service={service}
+//               onView={() => window.location.href = `/course/${service._id}`} // Navigate to course detail page
+//               onEnroll={() => handleEnroll(service._id)} // Handle enrollment
+//             />
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Services;
+
+
+
+
+// enhanced one 
+
+
 import { useEffect, useState } from "react";
 import ServiceCard from "../components/ServiceCard";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Loader2, AlertTriangle, RefreshCw } from "lucide-react";
 
 const Services = () => {
   const [services, setServices] = useState([]);
-  useEffect(() => {
-  fetch("http://localhost:3000/api/data/service") // Update with your actual API endpoint
-    .then((response) => response.json())
-    .then((data) => setServices(data.response)) // Extract the 'response' array
-    .catch((error) => console.error("Error fetching courses:", error));
-}, []);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  useEffect(() => {
+    const fetchServices = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch("http://localhost:3000/api/data/service");
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setServices(data.response);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchServices();
+  }, []);
+
+  const handleEnroll = (serviceId, serviceName) => {
+    toast.success(`Successfully enrolled in ${serviceName}!`);
+    // Additional enrollment logic can be added here
+  };
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+        <div className="text-center p-8 rounded-lg bg-white shadow-md">
+          <Loader2 className="h-12 w-12 animate-spin text-blue-500 mx-auto mb-4" />
+          <h2 className="text-xl font-semibold text-gray-800">Loading Courses</h2>
+          <p className="text-gray-500 mt-2">Please wait while we fetch our latest courses...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
+        <div className="text-center p-8 rounded-lg bg-white shadow-md max-w-md w-full">
+          <AlertTriangle className="h-12 w-12 text-red-500 mx-auto mb-4" />
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Failed to Load Courses</h2>
+          <p className="text-gray-600 mb-4">{error}</p>
+          <button 
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center mx-auto"
+            onClick={() => window.location.reload()}
+          >
+            <RefreshCw className="h-4 w-4 mr-2" />
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="container mx-auto p-6">
-      <h2 className="text-4xl p-2 font-bold text-gray-800 mb-6">Our Courses</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            service={service.service}
-            description={service.description}
-            price={service.price}
-            icon={service.icon}
-            provider={service.provider}
-            // providerImage={service.providerImage}
-          />
-        ))}
+    <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} />
+      
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Our Courses</h1>
+          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+            Advance your career with industry-leading courses taught by experts
+          </p>
+        </div>
+        
+        {services.length === 0 ? (
+          <div className="text-center p-12 bg-white rounded-lg shadow-md">
+            <h3 className="text-xl font-medium text-gray-500">
+              No courses available at the moment.
+            </h3>
+            <p className="mt-2 text-gray-400">Please check back later for new offerings.</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <ServiceCard 
+                key={service._id}
+                service={service}
+                onView={() => window.location.href = `/course/${service._id}`}
+                onEnroll={() => handleEnroll(service._id, service.service)}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

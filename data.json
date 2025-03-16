@@ -1,0 +1,3404 @@
+// {
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fe5"),
+//     "service": "Full-Stack Web Development",
+//     "description": "Master front-end and back-end development with hands-on projects in MERN stack.",
+//     "price": "₹12,999 - ₹24,999",
+//     "provider": "MyiDemy",
+//     "icon": "Code",
+//     "duration": "3 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic programming knowledge required",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 5
+//     },
+//     "courseOutline": [
+//       "HTML & CSS Basics",
+//       "JavaScript Fundamentals",
+//       "React.js for Frontend Development",
+//       "Node.js and Express for Backend",
+//       "MongoDB for Database Management"
+//     ],
+//     "instructor": {
+//       "name": "John Doe",
+//       "experience": "5 years",
+//       "notableProjects": "Developed multiple web applications for startups",
+//       "rating": 4.8
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.7,
+//     "totalReviews": 128,
+//     "topReviews": [
+//       "Great course! The instructor was very knowledgeable.",
+//       "I learned a lot and feel confident to build my own projects."
+//     ],
+//     "averageSalaryOfGraduates": "₹6 LPA - ₹12 LPA",
+//     "hiringPartners": [
+//       "Company A",
+//       "Company B",
+//       "Company C"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all assignments and projects"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company D",
+//         "Company E"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/169291/pexels-photo-169291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   }
+  
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fe6"),
+//     "service": "Data Science & Machine Learning",
+//     "description": "Learn Python, data analysis, and machine learning techniques with real-world applications.",
+//     "price": "₹18,999 - ₹29,999",
+//     "provider": "MyiDemy",
+//     "icon": "BarChart",
+//     "duration": "6 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Self-paced",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic statistics knowledge required",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Python",
+//       "Data Analysis with Pandas",
+//       "Machine Learning Algorithms",
+//       "Data Visualization with Matplotlib",
+//       "Capstone Project"
+//     ],
+//     "instructor": {
+//       "name": "Jane Smith",
+//       "experience": "7 years",
+//       "notableProjects": "Worked with Fortune 500 companies on data projects",
+//       "rating": 4.9
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 12 hours",
+//     "officeHours": "Available on weekdays",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on financial need"
+//     },
+//     "overallRating": 4.8,
+//     "totalReviews": 156,
+//     "topReviews": [
+//       "The course was very informative and well-structured.",
+//       "I gained practical skills that I can apply in my job."
+//     ],
+//     "averageSalaryOfGraduates": "₹8 LPA - ₹15 LPA",
+//     "hiringPartners": [
+//       "Company F",
+//       "Company G",
+//       "Company H"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company I",
+//         "Company J"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/416772/pexels-photo-416772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fe7"),
+//     "service": "UI/UX Design",
+//     "description": "Gain expertise in user experience and interface design using Figma and Adobe XD.",
+//     "price": "₹10,499 - ₹19,999",
+//     "provider": "MyiDemy",
+//     "icon": "Palette",
+//     "duration": "4 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Hybrid",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic design knowledge preferred",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 4
+//     },
+//     "courseOutline": [
+//       "Introduction to UI/UX Design",
+//       "User  Research Techniques",
+//       "Wireframing and Prototyping",
+//       "Usability Testing",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Alice Johnson",
+//       "experience": "6 years",
+//       "notableProjects": "Designed interfaces for top tech companies",
+//       "rating": 4.7
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.6,
+//     "totalReviews": 112,
+//     "topReviews": [
+//       "The course helped me transition into a UI/UX role.",
+//       "Great hands-on projects and supportive instructor."
+//     ],
+//     "averageSalaryOfGraduates": "₹5 LPA - ₹10 LPA",
+//     "hiringPartners": [
+//       "Company K",
+//       "Company L",
+//       "Company M"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company N",
+//         "Company O"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fe8"),
+//     "service": "Digital Marketing Mastery",
+//     "description": "Become an expert in SEO, PPC, social media marketing, and email marketing.",
+//     "price": "₹8,999 - ₹18,499",
+//     "provider": "MyiDemy",
+//     "icon": "Megaphone",
+//     "duration": "5 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic knowledge of marketing concepts",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Digital Marketing",
+//       "SEO Strategies",
+//       "Social Media Marketing",
+//       "Email Marketing Techniques",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Michael Brown",
+//       "experience": "8 years",
+//       "notableProjects": "Worked with leading brands on digital campaigns",
+//       "rating": 4.9
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 12 hours",
+//     "officeHours": "Available on weekdays",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on financial need"
+//     },
+//     "overallRating": 4.8,
+//     "totalReviews": 156,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about digital marketing strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹6 LPA - ₹12 LPA",
+//     "hiringPartners": [
+//       "Company P",
+//       "Company Q",
+//       "Company R"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company S",
+//         "Company T"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/416772/pexels-photo-416772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fe9"),
+//     "service": "Cybersecurity & Ethical Hacking",
+//     "description": "Learn penetration testing, network security, and ethical hacking techniques.",
+//     "price": "₹15,999 - ₹27,999",
+//     "provider": "MyiDemy",
+//     "icon": "ShieldAlert",
+//     "duration": "6 months",
+//     "skillLevel": "Advanced",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic networking knowledge required",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 4
+//     },
+//     "courseOutline": [
+//       "Introduction to Cybersecurity",
+//       "Network Security Fundamentals",
+//       "Ethical Hacking Techniques",
+//       "Penetration Testing",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "David Wilson",
+//       "experience": "10 years",
+//       "notableProjects": "Worked with government agencies on cybersecurity",
+//       "rating": 4.9
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 12 hours",
+//     "officeHours": "Available on weekdays",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.7,
+//     "totalReviews": 128,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about cybersecurity strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹8 LPA - ₹15 LPA",
+//     "hiringPartners": [
+//       "Company U",
+//       "Company V",
+//       "Company W"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company X",
+//         "Company Y"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fea"),
+//     "service": "Cloud Computing with AWS & Azure",
+//     "description": "Master cloud computing concepts and services using AWS and Microsoft Azure.",
+//     "price": "₹19,499 - ₹28,999",
+//     "provider": "MyiDemy",
+//     "icon": "Cloud",
+//     "duration": "5 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Hybrid",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic understanding of IT concepts",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Cloud Computing",
+//       "AWS Fundamentals",
+//       "Azure Fundamentals",
+//       "Cloud Security",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Emily Davis",
+//       "experience": "6 years",
+//       "notableProjects": "Worked on cloud migration projects for enterprises",
+//       "rating": 4.8
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on financial need"
+//     },
+//     "overallRating": 4.9,
+//     "totalReviews": 156,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about cloud computing strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹7 LPA - ₹14 LPA",
+//     "hiringPartners": [
+//       "Company Z",
+//       "Company AA",
+//       "Company AB"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company AC",
+//         "Company AD"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/416772/pexels-photo-416772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52feb"),
+//     "service": "Artificial Intelligence & Deep Learning",
+//     "description": "Explore neural networks, deep learning, and AI-powered applications.",
+//     "price": "₹22,999 - ₹29,999",
+//     "provider": "MyiDemy",
+//     "icon": "BrainCircuit",
+//     "duration": "6 months",
+//     "skillLevel": "Advanced",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic programming knowledge required",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 5
+//     },
+//     "courseOutline": [
+//       "Introduction to AI",
+//       "Machine Learning Basics",
+//       "Deep Learning with TensorFlow",
+//       "Natural Language Processing",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Robert Green",
+//       "experience": "8 years",
+//       "notableProjects": "Developed AI solutions for healthcare",
+//       "rating": 4.9
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 12 hours",
+//     "officeHours": "Available on weekdays",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.8,
+//     "totalReviews": 112,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about AI strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹10 LPA - ₹18 LPA",
+//     "hiringPartners": [
+//       "Company AE",
+//       "Company AF",
+//       "Company AG"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company AH",
+//         "Company AI"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fec"),
+//     "service": "Mobile App Development",
+//     "description": "Learn to build Android and iOS apps using React Native and Flutter.",
+//     "price": "₹14,999 - ₹25,999",
+//     "provider": "MyiDemy",
+//     "icon": "Smartphone",
+//     "duration": "4 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Hybrid",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic programming knowledge required",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Mobile Development",
+//       "React Native Basics",
+//       "Flutter Basics",
+//       "Building a Mobile App",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Sophia Turner",
+//       "experience": "5 years",
+//       "notableProjects": "Developed multiple mobile applications for startups",
+//       "rating": 4.7
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.6,
+//     "totalReviews": 112,
+//     "topReviews": [
+//       "The course helped me transition into a mobile development role.",
+//       "Great hands-on projects and supportive instructor."
+//     ],
+//     "averageSalaryOfGraduates": "₹6 LPA - ₹12 LPA",
+//     "hiringPartners": [
+//       "Company AJ",
+//       "Company AK",
+//       "Company AL"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company AM",
+//         "Company AN"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/416772/pexels-photo-416772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fed"),
+//     "service": "DevOps & CI/CD",
+//     "description": "Master continuous integration, deployment pipelines, and Kubernetes.",
+//     "price": "₹17,999 - ₹26,999",
+//     "provider": "MyiDemy",
+//     "icon": "Server",
+//     "duration": "5 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic knowledge of software development",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 4
+//     },
+//     "courseOutline": [
+//       "Introduction to DevOps",
+//       "CI/CD Concepts",
+//       "Docker and Kubernetes",
+//       "Monitoring and Logging",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Chris Evans",
+//       "experience": "6 years",
+//       "notableProjects": "Implemented CI/CD pipelines for major companies",
+//       "rating": 4.8
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.7,
+//     "totalReviews": 112,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about DevOps strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹8 LPA - ₹15 LPA",
+//     "hiringPartners": [
+//       "Company AO",
+//       "Company AP",
+//       "Company AQ"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company AR",
+//         "Company AS"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52fee"),
+//     "service": "Blockchain & Cryptocurrency",
+//     "description": "Understand blockchain technology, smart contracts, and decentralized apps.",
+//     "price": "₹21,499 - ₹29,999",
+//     "provider": "MyiDemy",
+//     "icon": "Blocks",
+//     "duration": "4 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic understanding of programming concepts",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 2
+//     },
+//     "courseOutline": [
+//       "Introduction to Blockchain",
+//       "Cryptocurrency Basics",
+//       "Smart Contracts Development",
+//       "Decentralized Applications (DApps)",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Alice Cooper",
+//       "experience": "5 years",
+//       "notableProjects": "Developed blockchain solutions for startups",
+//       "rating": 4.8
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.7,
+//     "totalReviews": 90,
+//     "topReviews": [
+//       "Great course! Very informative and practical.",
+//       "I learned a lot about blockchain technology."
+//     ],
+//     "averageSalaryOfGraduates": "₹8 LPA - ₹15 LPA",
+//     "hiringPartners": [
+//       "Company AT",
+//       "Company AU",
+//       "Company AV"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company AW",
+//         "Company AX"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff0"),
+//     "service": "Game Development",
+//     "description": "Create engaging games using Unity and Unreal Engine.",
+//     "price": "₹13,999 - ₹22,999",
+//     "provider": "MyiDemy",
+//     "icon": "Gamepad",
+//     "duration": "5 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Hybrid",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic programming knowledge required",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Game Development",
+//       "Unity Basics",
+//       "Unreal Engine Basics",
+//       "Game Design Principles",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Mark Taylor",
+//       "experience": "6 years",
+//       "notableProjects": "Developed multiple games for mobile and PC",
+//       "rating": 4.7
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.6,
+//     "totalReviews": 112,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about game development strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹7 LPA - ₹12 LPA",
+//     "hiringPartners": [
+//       "Company AY",
+//       "Company AZ",
+//       "Company BA"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company BB",
+//         "Company BC"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff1"),
+//     "service": "Graphic Design & Video Editing",
+//     "description": "Learn Photoshop, Illustrator, and Premiere Pro for professional design and editing.",
+//     "price": "₹9,999 - ₹18,499",
+//     "provider": "MyiDemy",
+//     "icon": "PenTool",
+//     "duration": "4 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic computer skills required",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 5
+//     },
+//     "courseOutline": [
+//       "Introduction to Graphic Design",
+//       "Photoshop Basics",
+//       "Illustrator Basics",
+//       "Video Editing with Premiere Pro",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Laura White",
+//       "experience": "5 years",
+//       "notableProjects": "Worked with various brands on design projects",
+//       "rating": 4.6
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.5,
+//     "totalReviews": 90,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about graphic design techniques."
+//     ],
+//     "averageSalaryOfGraduates": "₹5 LPA - ₹10 LPA",
+//     "hiringPartners": [
+//       "Company BD",
+//       "Company BE",
+//       "Company BF"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company BG",
+//         "Company BH"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff2"),
+//     "service": "E-Commerce & Dropshipping",
+//     "description": "Start and scale your online business with Shopify and WooCommerce.",
+//     "price": "₹11,499 - ₹20,999",
+//     "provider": "MyiDemy",
+//     "icon": "ShoppingCart",
+//     "duration": "3 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Self-paced",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic understanding of online business concepts",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 2
+//     },
+//     "courseOutline": [
+//       "Introduction to E-Commerce",
+//       "Setting Up Your Store",
+//       "Marketing Strategies",
+//       "Managing Orders and Customers",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "James Smith",
+//       "experience": "4 years",
+//       "notableProjects": "Launched multiple successful e-commerce stores",
+//       "rating": 4.5
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.6,
+//     "totalReviews": 75,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about e-commerce strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹5 LPA - ₹10 LPA",
+//     "hiringPartners": [
+//       "Company BI",
+//       "Company BJ",
+//       "Company BK"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company BL",
+//         "Company BM"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff3"),
+//     "service": "Business Analytics",
+//     "description": "Analyze data and make data-driven business decisions.",
+//     "price": "₹16,999 - ₹27,499",
+//     "provider": "MyiDemy",
+//     "icon": "PieChart",
+//     "duration": "4 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic knowledge of statistics",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Business Analytics",
+//       "Data Visualization Techniques",
+//       "Statistical Analysis",
+//       "Predictive Analytics",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Sarah Connor",
+//       "experience": "5 years",
+//       "notableProjects": "Worked with top firms on data analytics projects",
+//       "rating": 4.7
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.8,
+//     "totalReviews": 112,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about business analytics strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹7 LPA - ₹12 LPA",
+//     "hiringPartners": [
+//       "Company BN",
+//       "Company BO",
+//       "Company BP"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company BQ",
+//         "Company BR"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff4"),
+//     "service": "Stock Market & Investment Strategies",
+//     "description": "Learn trading, investment strategies, and financial market analysis.",
+//     "price": "₹12,499 - ₹23,999",
+//     "provider": "MyiDemy",
+//     "icon": "TrendingUp",
+//     "duration": "3 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Self-paced",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic understanding of finance",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 2
+//     },
+//     "courseOutline": [
+//       "Introduction to Stock Market",
+//       "Technical Analysis",
+//       "Fundamental Analysis",
+//       "Investment Strategies",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Michael Johnson",
+//       "experience": "7 years",
+//       "notableProjects": "Trained numerous students in stock trading",
+//       "rating": 4.6
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.5,
+//     "totalReviews": 80,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about stock trading strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹5 LPA - ₹10 LPA",
+//     "hiringPartners": [
+//       "Company BS",
+//       "Company BT",
+//       "Company BU"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company BV",
+//         "Company BW"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff5"),
+//     "service": "Photography & Videography",
+//     "description": "Master professional photography and videography techniques.",
+//     "price": "₹10,999 - ₹21,499",
+//     "provider": "MyiDemy",
+//     "icon": "Camera",
+//     "duration": "4 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic understanding of camera settings",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Photography",
+//       "Camera Settings and Techniques",
+//       "Photo Editing with Lightroom",
+//       "Videography Basics",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Emma Watson",
+//       "experience": "5 years",
+//       "notableProjects": "Worked with various brands on photography projects",
+//       "rating": 4.7
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.8,
+//     "totalReviews": 92,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about photography techniques."
+//     ],
+//     "averageSalaryOfGraduates": "₹5 LPA - ₹10 LPA",
+//     "hiringPartners": [
+//       "Company BX",
+//       "Company BY",
+//       "Company BZ"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company CA",
+//         "Company CB"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff6"),
+//     "service": "Interior Design & Architecture",
+//     "description": "Design beautiful spaces using 3D modeling and architectural principles.",
+//     "price": "₹18,499 - ₹28,999",
+//     "provider": "MyiDemy",
+//     "icon": "Ruler",
+//     "duration": "5 months",
+//     "skillLevel": "Intermediate",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic design knowledge preferred",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 4
+//     },
+//     "courseOutline": [
+//       "Introduction to Interior Design",
+//       "Space Planning",
+//       "Color Theory",
+//       "3D Modeling with SketchUp",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Olivia Brown",
+//       "experience": "6 years",
+//       "notableProjects": "Designed interiors for luxury homes",
+//       "rating": 4.6
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.7,
+//     "totalReviews": 80,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about interior design techniques."
+//     ],
+//     "averageSalaryOfGraduates": "₹6 LPA - ₹12 LPA",
+//     "hiringPartners": [
+//       "Company CC",
+//       "Company CD",
+//       "Company CE"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company CF",
+//         "Company CG"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff7"),
+//     "service": "Music Production & Sound Engineering",
+//     "description": "Produce music and master sound engineering with industry-standard tools.",
+//     "price": "₹14,999 - ₹24,999",
+//     "provider": "MyiDemy",
+//     "icon": "Music",
+//     "duration": "4 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic understanding of music theory",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Music Production",
+//       "DAW Basics",
+//       "Sound Design Techniques",
+//       "Mixing and Mastering",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Liam Smith",
+//       "experience": "5 years",
+//       "notableProjects": "Produced music for various artists",
+//       "rating": 4.8
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.9,
+//     "totalReviews": 60,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about music production techniques."
+//     ],
+//     "averageSalaryOfGraduates": "₹5 LPA - ₹10 LPA",
+//     "hiringPartners": [
+//       "Company CH",
+//       "Company CI",
+//       "Company CJ"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company CK",
+//         "Company CL"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff8"),
+//     "service": "Fitness & Nutrition Coaching",
+//     "description": "Get certified in personal training, diet planning, and wellness coaching.",
+//     "price": "₹9,499 - ₹17,999",
+//     "provider": "MyiDemy",
+//     "icon": "HeartPulse",
+//     "duration": "4 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "Basic understanding of health and fitness",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 2
+//     },
+//     "courseOutline": [
+//       "Introduction to Fitness Coaching",
+//       "Nutrition Basics",
+//       "Creating Workout Plans",
+//       "Client Management",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Sophia Turner",
+//       "experience": "6 years",
+//       "notableProjects": "Trained clients for fitness competitions",
+//       "rating": 4.7
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.8,
+//     "totalReviews": 70,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about fitness coaching techniques."
+//     ],
+//     "averageSalaryOfGraduates": "₹5 LPA - ₹10 LPA",
+//     "hiringPartners": [
+//       "Company CM",
+//       "Company CN",
+//       "Company CO"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company CP",
+//         "Company CQ"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ff9"),
+//     "service": "Foreign Languages (French, Spanish, German)",
+//     "description": "Become fluent in a new language with structured learning programs.",
+//     "price": "₹7,999 - ₹15,999",
+//     "provider": "MyiDemy",
+//     "icon": "Globe",
+//     "duration": "6 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Self-paced",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "None",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 2
+//     },
+//     "courseOutline": [
+//       "Introduction to French/Spanish/German",
+//       "Basic Grammar and Vocabulary",
+//       "Conversational Skills",
+//       "Cultural Insights",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Anna Lee",
+//       "experience": "4 years",
+//       "notableProjects": "Taught languages to over 500 students",
+//       "rating": 4.6
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.7,
+//     "totalReviews": 50,
+//     "topReviews": [
+//       "The course was very engaging and interactive.",
+//       "I feel confident speaking in my new language."
+//     ],
+//     "averageSalaryOfGraduates": "₹4 LPA - ₹8 LPA",
+//     "hiringPartners": [
+//       "Company CR",
+//       "Company CS",
+//       "Company CT"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company CU",
+//         "Company CV"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   },
+//   {
+//     "_id": ObjectId("67d6bf34455c6f6a3bd52ffa"),
+//     "service": "Entrepreneurship & Startup Growth",
+//     "description": "Learn how to launch and scale a successful startup with business strategies and funding insights.",
+//     "price": "₹15,999 - ₹27,999",
+//     "provider": "MyiDemy",
+//     "icon": "Briefcase",
+//     "duration": "5 months",
+//     "skillLevel": "Beginner",
+//     "modeOfLearning": "Live Classes",
+//     "certificationProvided": {
+//       "yes": true,
+//       "issuingAuthority": "MyiDemy"
+//     },
+//     "prerequisites": "None",
+//     "projectBasedLearning": {
+//       "yes": true,
+//       "numberOfProjects": 3
+//     },
+//     "courseOutline": [
+//       "Introduction to Entrepreneurship",
+//       "Business Model Development",
+//       "Funding Strategies",
+//       "Marketing for Startups",
+//       "Final Project"
+//     ],
+//     "instructor": {
+//       "name": "Daniel Craig",
+//       "experience": "8 years",
+//       "notableProjects": "Founded multiple successful startups",
+//       "rating": 4.9
+//     },
+//     "mentorshipSupport": {
+//       "yes": true,
+//       "liveDoubtSolvingSessions": true
+//     },
+//     "discussionForum": {
+//       "yes": true,
+//       "communityAccess": true
+//     },
+//     "doubtResolutionTime": "Within 24 hours",
+//     "officeHours": "Available on weekends",
+//     "careerSupport": {
+//       "resumeBuilding": true,
+//       "interviewPreparation": true,
+//       "internships": true
+//     },
+//     "assignmentsAndQuizzes": {
+//       "yes": true,
+//       "weeklyAssignments": true,
+//       "mcqTests": true
+//     },
+//     "installmentOptions": {
+//       "yes": true,
+//       "emiPlans": true
+//     },
+//     "discountsAndOffers": {
+//       "earlyBirdDiscount": true,
+//       "referralBonus": true
+//     },
+//     "scholarshipsAvailable": {
+//       "yes": true,
+//       "criteria": "Based on merit"
+//     },
+//     "overallRating": 4.8,
+//     "totalReviews": 60,
+//     "topReviews": [
+//       "The course was very informative and practical.",
+//       "I learned a lot about entrepreneurship strategies."
+//     ],
+//     "averageSalaryOfGraduates": "₹6 LPA - ₹12 LPA",
+//     "hiringPartners": [
+//       "Company CW",
+//       "Company CX",
+//       "Company CY"
+//     ],
+//     "jobGuarantee": {
+//       "yes": true,
+//       "conditions": "Complete all projects and assessments"
+//     },
+//     "internshipOpportunities": {
+//       "yes": true,
+//       "partnerCompanies": [
+//         "Company CZ",
+//         "Company DA"
+//       ]
+//     },
+//     "leaderboardAndBadges": true,
+//     "aiPoweredLearningRecommendations": true,
+//     "interactiveCodingPlatform": true,
+//     "images": [
+//       "https://images.pexels.com/photos/46253/himalayan-mountain-range-india-sky-46253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/373895/pexels-photo-373895.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//       "https://images.pexels.com/photos/3601456/pexels-photo-3601456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+//     ],
+//     "featured": true
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// db.services.insertMany([
+//   {
+//     _id: ObjectId("67d6bf34455c6f6a3bd52fed"),
+//     service: "Blockchain Development",
+//     description: "Learn to build decentralized applications and smart contracts on Ethereum and other blockchains.",
+//     price: "₹16,999 - ₹28,999",
+//     provider: "MyiDemy",
+//     icon: "Database",
+//     duration: "4 months",
+//     skillLevel: "Intermediate to Advanced",
+//     modeOfLearning: "Live Classes",
+//     certificationProvided: {
+//       yes: true,
+//       issuingAuthority: "MyiDemy"
+//     },
+//     prerequisites: "JavaScript knowledge and basic programming skills",
+//     projectBasedLearning: {
+//       yes: true,
+//       numberOfProjects: 4
+//     },
+//     courseOutline: [
+//       "Blockchain Fundamentals",
+//       "Ethereum Development",
+//       "Smart Contract Programming with Solidity",
+//       "DApp Development",
+//       "Web3.js Integration"
+//     ],
+//     instructor: {
+//       name: "Sarah Johnson",
+//       experience: "7 years",
+//       notableProjects: "Created blockchain solutions for fintech companies",
+//       rating: 4.9
+//     },
+//     mentorshipSupport: {
+//       yes: true,
+//       liveDoubtSolvingSessions: true
+//     },
+//     discussionForum: {
+//       yes: true,
+//       communityAccess: true
+//     },
+//     doubtResolutionTime: "Within 24 hours",
+//     officeHours: "Available on weekdays",
+//     careerSupport: {
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       internships: true
+//     },
+//     assignmentsAndQuizzes: {
+//       yes: true,
+//       weeklyAssignments: true,
+//       mcqTests: true
+//     },
+//     installmentOptions: {
+//       yes: true,
+//       emiPlans: true
+//     },
+//     discountsAndOffers: {
+//       earlyBirdDiscount: true,
+//       referralBonus: true
+//     },
+//     scholarshipsAvailable: {
+//       yes: true,
+//       criteria: "Based on technical assessment"
+//     },
+//     overallRating: 4.8,
+//     totalReviews: 95,
+//     topReviews: [
+//       "Comprehensive blockchain training with practical examples.",
+//       "Helped me transition to a blockchain developer role."
+//     ],
+//     averageSalaryOfGraduates: "₹9 LPA - ₹15 LPA",
+//     hiringPartners: [
+//       "Blockchain Ventures",
+//       "CryptoTech",
+//       "DeFi Solutions"
+//     ],
+//     jobGuarantee: {
+//       yes: true,
+//       conditions: "Complete all assignments and projects"
+//     },
+//     internshipOpportunities: {
+//       yes: true,
+//       partnerCompanies: [
+//         "Ethereum Foundation Partners",
+//         "Web3 Startups"
+//       ]
+//     },
+//     leaderboardAndBadges: true,
+//     aiPoweredLearningRecommendations: true,
+//     interactiveCodingPlatform: true,
+//     images: [
+//       "https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg",
+//       "https://images.pexels.com/photos/8369650/pexels-photo-8369650.jpeg",
+//       "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg"
+//     ],
+//     featured: true
+//   },
+//   {
+//     _id: ObjectId("67d6bf34455c6f6a3bd52fee"),
+//     service: "Artificial Intelligence & Deep Learning",
+//     description: "Master AI algorithms, neural networks, and deep learning frameworks for cutting-edge applications.",
+//     price: "₹19,999 - ₹32,999",
+//     provider: "MyiDemy",
+//     icon: "Brain",
+//     duration: "5 months",
+//     skillLevel: "Advanced",
+//     modeOfLearning: "Live Classes",
+//     certificationProvided: {
+//       yes: true,
+//       issuingAuthority: "MyiDemy"
+//     },
+//     prerequisites: "Python programming and basic statistics knowledge",
+//     projectBasedLearning: {
+//       yes: true,
+//       numberOfProjects: 6
+//     },
+//     courseOutline: [
+//       "Advanced Python for AI",
+//       "Neural Networks Fundamentals",
+//       "Deep Learning with TensorFlow",
+//       "Computer Vision",
+//       "Natural Language Processing",
+//       "Reinforcement Learning"
+//     ],
+//     instructor: {
+//       name: "Dr. Michael Chen",
+//       experience: "10 years",
+//       notableProjects: "Published AI research in top conferences",
+//       rating: 4.9
+//     },
+//     mentorshipSupport: {
+//       yes: true,
+//       liveDoubtSolvingSessions: true
+//     },
+//     discussionForum: {
+//       yes: true,
+//       communityAccess: true
+//     },
+//     doubtResolutionTime: "Within 12 hours",
+//     officeHours: "Available daily",
+//     careerSupport: {
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       internships: true
+//     },
+//     assignmentsAndQuizzes: {
+//       yes: true,
+//       weeklyAssignments: true,
+//       mcqTests: true
+//     },
+//     installmentOptions: {
+//       yes: true,
+//       emiPlans: true
+//     },
+//     discountsAndOffers: {
+//       earlyBirdDiscount: true,
+//       referralBonus: true
+//     },
+//     scholarshipsAvailable: {
+//       yes: true,
+//       criteria: "Based on AI competition results"
+//     },
+//     overallRating: 4.9,
+//     totalReviews: 120,
+//     topReviews: [
+//       "Exceptional course with cutting-edge AI content.",
+//       "The projects helped me build an impressive portfolio."
+//     ],
+//     averageSalaryOfGraduates: "₹12 LPA - ₹20 LPA",
+//     hiringPartners: [
+//       "AI Research Labs",
+//       "Tech Giants",
+//       "AI Startups"
+//     ],
+//     jobGuarantee: {
+//       yes: true,
+//       conditions: "Complete capstone project with distinction"
+//     },
+//     internshipOpportunities: {
+//       yes: true,
+//       partnerCompanies: [
+//         "Neural Innovations",
+//         "AI Pioneers"
+//       ]
+//     },
+//     leaderboardAndBadges: true,
+//     aiPoweredLearningRecommendations: true,
+//     interactiveCodingPlatform: true,
+//     images: [
+//       "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg",
+//       "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg",
+//       "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg"
+//     ],
+//     featured: true
+//   },
+//   {
+//     _id: ObjectId("67d6bf34455c6f6a3bd52fef"),
+//     service: "Game Development with Unity",
+//     description: "Learn to create immersive 2D and 3D games using Unity engine and C# programming.",
+//     price: "₹15,999 - ₹27,999",
+//     provider: "MyiDemy",
+//     icon: "Gamepad",
+//     duration: "4 months",
+//     skillLevel: "Beginner to Intermediate",
+//     modeOfLearning: "Live Classes",
+//     certificationProvided: {
+//       yes: true,
+//       issuingAuthority: "MyiDemy"
+//     },
+//     prerequisites: "Basic programming knowledge helpful but not required",
+//     projectBasedLearning: {
+//       yes: true,
+//       numberOfProjects: 5
+//     },
+//     courseOutline: [
+//       "Introduction to Game Design",
+//       "Unity Interface and Basics",
+//       "C# Programming for Games",
+//       "2D Game Development",
+//       "3D Game Development",
+//       "Game Physics and Animation"
+//     ],
+//     instructor: {
+//       name: "Alex Martinez",
+//       experience: "8 years",
+//       notableProjects: "Published indie games with over 1M downloads",
+//       rating: 4.7
+//     },
+//     mentorshipSupport: {
+//       yes: true,
+//       liveDoubtSolvingSessions: true
+//     },
+//     discussionForum: {
+//       yes: true,
+//       communityAccess: true
+//     },
+//     doubtResolutionTime: "Within 24 hours",
+//     officeHours: "Available on weekends",
+//     careerSupport: {
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       internships: true
+//     },
+//     assignmentsAndQuizzes: {
+//       yes: true,
+//       weeklyAssignments: true,
+//       mcqTests: true
+//     },
+//     installmentOptions: {
+//       yes: true,
+//       emiPlans: true
+//     },
+//     discountsAndOffers: {
+//       earlyBirdDiscount: true,
+//       referralBonus: true
+//     },
+//     scholarshipsAvailable: {
+//       yes: true,
+//       criteria: "Based on game design portfolio"
+//     },
+//     overallRating: 4.7,
+//     totalReviews: 105,
+//     topReviews: [
+//       "The course helped me launch my first game on multiple platforms.",
+//       "Practical approach with hands-on game development from day one."
+//     ],
+//     averageSalaryOfGraduates: "₹7 LPA - ₹14 LPA",
+//     hiringPartners: [
+//       "Game Studios",
+//       "Mobile Game Companies",
+//       "AR/VR Startups"
+//     ],
+//     jobGuarantee: {
+//       yes: true,
+//       conditions: "Complete all game projects"
+//     },
+//     internshipOpportunities: {
+//       yes: true,
+//       partnerCompanies: [
+//         "Indie Game Studios",
+//         "Gaming Accelerators"
+//       ]
+//     },
+//     leaderboardAndBadges: true,
+//     aiPoweredLearningRecommendations: true,
+//     interactiveCodingPlatform: true,
+//     images: [
+//       "https://images.pexels.com/photos/7915437/pexels-photo-7915437.jpeg",
+//       "https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg",
+//       "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg"
+//     ],
+//     featured: false
+//   },
+//   {
+//     _id: ObjectId("67d6bf34455c6f6a3bd52ff0"),
+//     service: "Digital Marketing & SEO",
+//     description: "Master digital marketing strategies, SEO techniques, and social media campaigns for business growth.",
+//     price: "₹13,999 - ₹25,999",
+//     provider: "MyiDemy",
+//     icon: "TrendingUp",
+//     duration: "3 months",
+//     skillLevel: "Beginner to Intermediate",
+//     modeOfLearning: "Live Classes",
+//     certificationProvided: {
+//       yes: true,
+//       issuingAuthority: "MyiDemy"
+//     },
+//     prerequisites: "No prior experience required",
+//     projectBasedLearning: {
+//       yes: true,
+//       numberOfProjects: 4
+//     },
+//     courseOutline: [
+//       "Digital Marketing Fundamentals",
+//       "Search Engine Optimization (SEO)",
+//       "Social Media Marketing",
+//       "Content Marketing Strategies",
+//       "Google Ads and PPC",
+//       "Analytics and Performance Tracking"
+//     ],
+//     instructor: {
+//       name: "Priya Sharma",
+//       experience: "9 years",
+//       notableProjects: "Led marketing campaigns for Fortune 500 companies",
+//       rating: 4.8
+//     },
+//     mentorshipSupport: {
+//       yes: true,
+//       liveDoubtSolvingSessions: true
+//     },
+//     discussionForum: {
+//       yes: true,
+//       communityAccess: true
+//     },
+//     doubtResolutionTime: "Within 24 hours",
+//     officeHours: "Available on weekdays",
+//     careerSupport: {
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       internships: true
+//     },
+//     assignmentsAndQuizzes: {
+//       yes: true,
+//       weeklyAssignments: true,
+//       mcqTests: true
+//     },
+//     installmentOptions: {
+//       yes: true,
+//       emiPlans: true
+//     },
+//     discountsAndOffers: {
+//       earlyBirdDiscount: true,
+//       referralBonus: true
+//     },
+//     scholarshipsAvailable: {
+//       yes: true,
+//       criteria: "Based on marketing portfolio"
+//     },
+//     overallRating: 4.8,
+//     totalReviews: 142,
+//     topReviews: [
+//       "Comprehensive digital marketing training with real-world applications.",
+//       "The SEO techniques I learned doubled my website traffic."
+//     ],
+//     averageSalaryOfGraduates: "₹6 LPA - ₹12 LPA",
+//     hiringPartners: [
+//       "Digital Agencies",
+//       "Marketing Firms",
+//       "E-commerce Companies"
+//     ],
+//     jobGuarantee: {
+//       yes: true,
+//       conditions: "Complete all marketing campaigns"
+//     },
+//     internshipOpportunities: {
+//       yes: true,
+//       partnerCompanies: [
+//         "Digital Marketing Agencies",
+//         "Media Companies"
+//       ]
+//     },
+//     leaderboardAndBadges: true,
+//     aiPoweredLearningRecommendations: true,
+//     interactiveCodingPlatform: false,
+//     images: [
+//       "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg",
+//       "https://images.pexels.com/photos/6476254/pexels-photo-6476254.jpeg",
+//       "https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg"
+//     ],
+//     featured: true
+//   },
+//   {
+//     _id: ObjectId("67d6bf34455c6f6a3bd52ff1"),
+//     service: "Data Engineering & Big Data",
+//     description: "Learn to build scalable data pipelines and process massive datasets using modern big data tools.",
+//     price: "₹17,999 - ₹29,999",
+//     provider: "MyiDemy",
+//     icon: "Database",
+//     duration: "4 months",
+//     skillLevel: "Intermediate to Advanced",
+//     modeOfLearning: "Live Classes",
+//     certificationProvided: {
+//       yes: true,
+//       issuingAuthority: "MyiDemy"
+//     },
+//     prerequisites: "Programming basics and database knowledge",
+//     projectBasedLearning: {
+//       yes: true,
+//       numberOfProjects: 5
+//     },
+//     courseOutline: [
+//       "Data Engineering Fundamentals",
+//       "Apache Spark and Hadoop",
+//       "SQL and NoSQL Databases",
+//       "ETL Pipeline Development",
+//       "Data Warehousing",
+//       "Real-time Data Processing"
+//     ],
+//     instructor: {
+//       name: "Robert Wilson",
+//       experience: "12 years",
+//       notableProjects: "Built data platforms for financial institutions",
+//       rating: 4.9
+//     },
+//     mentorshipSupport: {
+//       yes: true,
+//       liveDoubtSolvingSessions: true
+//     },
+//     discussionForum: {
+//       yes: true,
+//       communityAccess: true
+//     },
+//     doubtResolutionTime: "Within 24 hours",
+//     officeHours: "Available on weekdays",
+//     careerSupport: {
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       internships: true
+//     },
+//     assignmentsAndQuizzes: {
+//       yes: true,
+//       weeklyAssignments: true,
+//       mcqTests: true
+//     },
+//     installmentOptions: {
+//       yes: true,
+//       emiPlans: true
+//     },
+//     discountsAndOffers: {
+//       earlyBirdDiscount: true,
+//       referralBonus: true
+//     },
+//     scholarshipsAvailable: {
+//       yes: true,
+//       criteria: "Based on technical assessment"
+//     },
+//     overallRating: 4.8,
+//     totalReviews: 98,
+//     topReviews: [
+//       "In-depth training on big data technologies with practical applications.",
+//       "The hands-on projects with real datasets were incredibly valuable."
+//     ],
+//     averageSalaryOfGraduates: "₹10 LPA - ₹18 LPA",
+//     hiringPartners: [
+//       "Tech Giants",
+//       "Analytics Companies",
+//       "Financial Institutions"
+//     ],
+//     jobGuarantee: {
+//       yes: true,
+//       conditions: "Complete all projects with 80% score"
+//     },
+//     internshipOpportunities: {
+//       yes: true,
+//       partnerCompanies: [
+//         "Data Solutions Inc.",
+//         "Analytics Ventures"
+//       ]
+//     },
+//     leaderboardAndBadges: true,
+//     aiPoweredLearningRecommendations: true,
+//     interactiveCodingPlatform: true,
+//     images: [
+//       "https://images.pexels.com/photos/4402617/pexels-photo-4402617.jpeg",
+//       "https://images.pexels.com/photos/4960464/pexels-photo-4960464.jpeg",
+//       "https://images.pexels.com/photos/14936129/pexels-photo-14936129.jpeg"
+//     ],
+//     featured: true
+//   },
+//   {
+//     _id: ObjectId("67d6bf34455c6f6a3bd52ff2"),
+//     service: "IoT and Embedded Systems",
+//     description: "Master the development of Internet of Things devices and embedded systems programming.",
+//     price: "₹16,999 - ₹28,999",
+//     provider: "MyiDemy",
+//     icon: "Cpu",
+//     duration: "4 months",
+//     skillLevel: "Intermediate",
+//     modeOfLearning: "Live Classes",
+//     certificationProvided: {
+//       yes: true,
+//       issuingAuthority: "MyiDemy"
+//     },
+//     prerequisites: "Basic electronics and programming knowledge",
+//     projectBasedLearning: {
+//       yes: true,
+//       numberOfProjects: 6
+//     },
+//     courseOutline: [
+//       "Embedded Systems Fundamentals",
+//       "Microcontroller Programming",
+//       "IoT Architecture",
+//       "Sensor Integration",
+//       "Wireless Communication Protocols",
+//       "Cloud Integration for IoT"
+//     ],
+//     instructor: {
+//       name: "David Kumar",
+//       experience: "8 years",
+//       notableProjects: "Developed industrial IoT solutions for manufacturing",
+//       rating: 4.7
+//     },
+//     mentorshipSupport: {
+//       yes: true,
+//       liveDoubtSolvingSessions: true
+//     },
+//     discussionForum: {
+//       yes: true,
+//       communityAccess: true
+//     },
+//     doubtResolutionTime: "Within 24 hours",
+//     officeHours: "Available on weekends",
+//     careerSupport: {
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       internships: true
+//     },
+//     assignmentsAndQuizzes: {
+//       yes: true,
+//       weeklyAssignments: true,
+//       mcqTests: true
+//     },
+//     installmentOptions: {
+//       yes: true,
+//       emiPlans: true
+//     },
+//     discountsAndOffers: {
+//       earlyBirdDiscount: true,
+//       referralBonus: true
+//     },
+//     scholarshipsAvailable: {
+//       yes: true,
+//       criteria: "Based on hardware prototype submission"
+//     },
+//     overallRating: 4.6,
+//     totalReviews: 85,
+//     topReviews: [
+//       "Excellent course for anyone interested in IoT development.",
+//       "The hardware kits provided were perfect for hands-on learning."
+//     ],
+//     averageSalaryOfGraduates: "₹8 LPA - ₹15 LPA",
+//     hiringPartners: [
+//       "IoT Solutions",
+//       "Smart Home Companies",
+//       "Industrial Automation Firms"
+//     ],
+//     jobGuarantee: {
+//       yes: true,
+//       conditions: "Complete capstone project"
+//     },
+//     internshipOpportunities: {
+//       yes: true,
+//       partnerCompanies: [
+//         "Connected Devices Inc.",
+//         "Smart Systems"
+//       ]
+//     },
+//     leaderboardAndBadges: true,
+//     aiPoweredLearningRecommendations: true,
+//     interactiveCodingPlatform: true,
+//     images: [
+//       "https://images.pexels.com/photos/163126/board-electronics-computer-office-163126.jpeg",
+//       "https://images.pexels.com/photos/1472443/pexels-photo-1472443.jpeg",
+//       "https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg"
+//     ],
+//     featured: false
+//   },
+//   {
+//     _id: ObjectId("67d6bf34455c6f6a3bd52ff3"),
+//     service: "Product Management",
+//     description: "Learn end-to-end product management skills to build and launch successful digital products.",
+//     price: "₹14,999 - ₹26,999",
+//     provider: "MyiDemy",
+//     icon: "Target",
+//     duration: "3 months",
+//     skillLevel: "Beginner to Intermediate",
+//     modeOfLearning: "Live Classes",
+//     certificationProvided: {
+//       yes: true,
+//       issuingAuthority: "MyiDemy"
+//     },
+//     prerequisites: "No specific prerequisites, business background helpful",
+//     projectBasedLearning: {
+//       yes: true,
+//       numberOfProjects: 4
+//     },
+//     courseOutline: [
+//       "Product Management Fundamentals",
+//       "User Research and Personas",
+//       "Product Strategy and Roadmapping",
+//       "Agile and Scrum Methodologies",
+//       "Product Metrics and Analytics",
+//       "Go-to-Market Strategies"
+//     ],
+//     instructor: {
+//       name: "Riya Patel",
+//       experience: "10 years",
+//       notableProjects: "Led product teams at multiple tech unicorns",
+//       rating: 4.8
+//     },
+//     mentorshipSupport: {
+//       yes: true,
+//       liveDoubtSolvingSessions: true
+//     },
+//     discussionForum: {
+//       yes: true,
+//       communityAccess: true
+//     },
+//     doubtResolutionTime: "Within 24 hours",
+//     officeHours: "Available on weekdays",
+//     careerSupport: {
+//       resumeBuilding: true,
+//       interviewPreparation: true,
+//       internships: true
+//     },
+//     assignmentsAndQuizzes: {
+//       yes: true,
+//       weeklyAssignments: true,
+//       mcqTests: true
+//     },
+//     installmentOptions: {
+//       yes: true,
+//       emiPlans: true
+//     },
+//     discountsAndOffers: {
+//       earlyBirdDiscount: true,
+//       referralBonus: true
+//     },
+//     scholarshipsAvailable: {
+//       yes: true,
+//       criteria: "Based on product case study submission"
+//     },
+//     overallRating: 4.7,
+//     totalReviews: 112,
+//     topReviews: [
+//       "Comprehensive course that covers all aspects of product management.",
+//       "The case studies and real-world examples were incredibly valuable."
+//     ],
+//     averageSalaryOfGraduates: "₹10 LPA - ₹20 LPA",
+//     hiringPartners: [
+//       "Tech Startups",
+//       "Product Companies",
+//       "E-commerce Platforms"
+//     ],
+//     jobGuarantee: {
+//       yes: true,
+//       conditions: "Complete product portfolio"
+//     },
+//     internshipOpportunities: {
+//       yes: true,
+//       partnerCompanies: [
+//         "Product Ventures",
+//         "Tech Incubators"
+//       ]
+//     },
+//     leaderboardAndBadges: true,
+//     aiPoweredLearningRecommendations: true,
+//     interactiveCodingPlatform: false,
+//     images: [
+//       "https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg",
+//       "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+//       "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
+//     ],
+//     featured: true
+//   }
+// ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MongoDB insertion query for 6 more courses with specified ObjectIds
+db.services.insertMany([
+  {
+    _id: ObjectId("67d6bf34455c6f6a3bd52ff4"),
+    service: "Financial Technology (FinTech)",
+    description: "Master the intersection of finance and technology with focus on payment systems, blockchain, and financial APIs.",
+    price: "₹18,999 - ₹29,999",
+    provider: "MyiDemy",
+    icon: "TrendingUp",
+    duration: "4 months",
+    skillLevel: "Intermediate",
+    modeOfLearning: "Live Classes",
+    certificationProvided: {
+      yes: true,
+      issuingAuthority: "MyiDemy"
+    },
+    prerequisites: "Basic understanding of finance concepts and programming",
+    projectBasedLearning: {
+      yes: true,
+      numberOfProjects: 5
+    },
+    courseOutline: [
+      "FinTech Ecosystem Overview",
+      "Payment Processing Systems",
+      "Financial APIs and Open Banking",
+      "Blockchain for Finance",
+      "RegTech and Compliance",
+      "AI in Financial Services"
+    ],
+    instructor: {
+      name: "Rahul Mehta",
+      experience: "12 years",
+      notableProjects: "Built payment systems for major banks",
+      rating: 4.8
+    },
+    mentorshipSupport: {
+      yes: true,
+      liveDoubtSolvingSessions: true
+    },
+    discussionForum: {
+      yes: true,
+      communityAccess: true
+    },
+    doubtResolutionTime: "Within 24 hours",
+    officeHours: "Available on weekdays",
+    careerSupport: {
+      resumeBuilding: true,
+      interviewPreparation: true,
+      internships: true
+    },
+    assignmentsAndQuizzes: {
+      yes: true,
+      weeklyAssignments: true,
+      mcqTests: true
+    },
+    installmentOptions: {
+      yes: true,
+      emiPlans: true
+    },
+    discountsAndOffers: {
+      earlyBirdDiscount: true,
+      referralBonus: true
+    },
+    scholarshipsAvailable: {
+      yes: true,
+      criteria: "Based on finance background and technical assessment"
+    },
+    overallRating: 4.8,
+    totalReviews: 92,
+    topReviews: [
+      "Comprehensive overview of FinTech with practical applications.",
+      "The project on payment gateway integration was particularly useful."
+    ],
+    averageSalaryOfGraduates: "₹10 LPA - ₹18 LPA",
+    hiringPartners: [
+      "Banks",
+      "Payment Startups",
+      "Financial Software Companies"
+    ],
+    jobGuarantee: {
+      yes: true,
+      conditions: "Complete all projects with distinction"
+    },
+    internshipOpportunities: {
+      yes: true,
+      partnerCompanies: [
+        "PayTech Solutions",
+        "FinServe Innovations"
+      ]
+    },
+    leaderboardAndBadges: true,
+    aiPoweredLearningRecommendations: true,
+    interactiveCodingPlatform: true,
+    images: [
+      "https://images.pexels.com/photos/6801874/pexels-photo-6801874.jpeg",
+      "https://images.pexels.com/photos/6347720/pexels-photo-6347720.jpeg",
+      "https://images.pexels.com/photos/6347561/pexels-photo-6347561.jpeg"
+    ],
+    featured: true
+  },
+  {
+    _id: ObjectId("67d6bf34455c6f6a3bd52ff5"),
+    service: "Augmented & Virtual Reality Development",
+    description: "Learn to create immersive AR/VR experiences using Unity, Unreal Engine, and ARKit/ARCore.",
+    price: "₹17,999 - ₹29,999",
+    provider: "MyiDemy",
+    icon: "Glasses",
+    duration: "4 months",
+    skillLevel: "Intermediate",
+    modeOfLearning: "Live Classes",
+    certificationProvided: {
+      yes: true,
+      issuingAuthority: "MyiDemy"
+    },
+    prerequisites: "Basic 3D modeling and programming knowledge helpful",
+    projectBasedLearning: {
+      yes: true,
+      numberOfProjects: 5
+    },
+    courseOutline: [
+      "AR/VR Fundamentals",
+      "Unity for AR/VR Development",
+      "3D Modeling for Immersive Experiences",
+      "Mobile AR with ARKit/ARCore",
+      "VR Development with Oculus SDK",
+      "Spatial Computing and Mixed Reality"
+    ],
+    instructor: {
+      name: "Vikram Singh",
+      experience: "7 years",
+      notableProjects: "Created AR applications for major retail brands",
+      rating: 4.7
+    },
+    mentorshipSupport: {
+      yes: true,
+      liveDoubtSolvingSessions: true
+    },
+    discussionForum: {
+      yes: true,
+      communityAccess: true
+    },
+    doubtResolutionTime: "Within 24 hours",
+    officeHours: "Available on weekends",
+    careerSupport: {
+      resumeBuilding: true,
+      interviewPreparation: true,
+      internships: true
+    },
+    assignmentsAndQuizzes: {
+      yes: true,
+      weeklyAssignments: true,
+      mcqTests: true
+    },
+    installmentOptions: {
+      yes: true,
+      emiPlans: true
+    },
+    discountsAndOffers: {
+      earlyBirdDiscount: true,
+      referralBonus: true
+    },
+    scholarshipsAvailable: {
+      yes: true,
+      criteria: "Based on portfolio submission"
+    },
+    overallRating: 4.6,
+    totalReviews: 78,
+    topReviews: [
+      "Excellent course for getting started with AR/VR development.",
+      "The hands-on projects helped me build an impressive portfolio."
+    ],
+    averageSalaryOfGraduates: "₹8 LPA - ₹16 LPA",
+    hiringPartners: [
+      "AR/VR Studios",
+      "Gaming Companies",
+      "Architectural Visualization Firms"
+    ],
+    jobGuarantee: {
+      yes: true,
+      conditions: "Complete capstone AR/VR project"
+    },
+    internshipOpportunities: {
+      yes: true,
+      partnerCompanies: [
+        "Immersive Experience Labs",
+        "Reality Ventures"
+      ]
+    },
+    leaderboardAndBadges: true,
+    aiPoweredLearningRecommendations: true,
+    interactiveCodingPlatform: true,
+    images: [
+      "https://images.pexels.com/photos/8069158/pexels-photo-8069158.jpeg",
+      "https://images.pexels.com/photos/8069424/pexels-photo-8069424.jpeg",
+      "https://images.pexels.com/photos/6074379/pexels-photo-6074379.jpeg"
+    ],
+    featured: false
+  },
+  {
+    _id: ObjectId("67d6bf34455c6f6a3bd52ff6"),
+    service: "Robotics Programming",
+    description: "Learn to program robots using ROS (Robot Operating System) and implement computer vision and AI algorithms.",
+    price: "₹19,999 - ₹32,999",
+    provider: "MyiDemy",
+    icon: "Bot",
+    duration: "5 months",
+    skillLevel: "Intermediate to Advanced",
+    modeOfLearning: "Live Classes",
+    certificationProvided: {
+      yes: true,
+      issuingAuthority: "MyiDemy"
+    },
+    prerequisites: "Programming experience and basic physics knowledge",
+    projectBasedLearning: {
+      yes: true,
+      numberOfProjects: 6
+    },
+    courseOutline: [
+      "Introduction to Robotics",
+      "Robot Operating System (ROS)",
+      "Computer Vision for Robotics",
+      "Robot Kinematics and Dynamics",
+      "Path Planning Algorithms",
+      "AI and Machine Learning for Robots"
+    ],
+    instructor: {
+      name: "Dr. Amit Verma",
+      experience: "15 years",
+      notableProjects: "Developed industrial automation robots",
+      rating: 4.9
+    },
+    mentorshipSupport: {
+      yes: true,
+      liveDoubtSolvingSessions: true
+    },
+    discussionForum: {
+      yes: true,
+      communityAccess: true
+    },
+    doubtResolutionTime: "Within 12 hours",
+    officeHours: "Available daily",
+    careerSupport: {
+      resumeBuilding: true,
+      interviewPreparation: true,
+      internships: true
+    },
+    assignmentsAndQuizzes: {
+      yes: true,
+      weeklyAssignments: true,
+      mcqTests: true
+    },
+    installmentOptions: {
+      yes: true,
+      emiPlans: true
+    },
+    discountsAndOffers: {
+      earlyBirdDiscount: true,
+      referralBonus: true
+    },
+    scholarshipsAvailable: {
+      yes: true,
+      criteria: "Based on robotics competition achievement"
+    },
+    overallRating: 4.9,
+    totalReviews: 72,
+    topReviews: [
+      "In-depth course that covers both theory and practical aspects of robotics.",
+      "The simulation exercises were particularly helpful for understanding complex concepts."
+    ],
+    averageSalaryOfGraduates: "₹12 LPA - ₹22 LPA",
+    hiringPartners: [
+      "Robotics Companies",
+      "Industrial Automation Firms",
+      "Research Institutions"
+    ],
+    jobGuarantee: {
+      yes: true,
+      conditions: "Complete robot programming project"
+    },
+    internshipOpportunities: {
+      yes: true,
+      partnerCompanies: [
+        "Robotics Innovations",
+        "Automation Tech"
+      ]
+    },
+    leaderboardAndBadges: true,
+    aiPoweredLearningRecommendations: true,
+    interactiveCodingPlatform: true,
+    images: [
+      "https://images.pexels.com/photos/8566395/pexels-photo-8566395.jpeg",
+      "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg",
+      "https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg"
+    ],
+    featured: true
+  },
+  {
+    _id: ObjectId("67d6bf34455c6f6a3bd52ff7"),
+    service: "Quantum Computing",
+    description: "Explore quantum computing principles and programming using Qiskit and other quantum frameworks.",
+    price: "₹21,999 - ₹34,999",
+    provider: "MyiDemy",
+    icon: "Atom",
+    duration: "5 months",
+    skillLevel: "Advanced",
+    modeOfLearning: "Live Classes",
+    certificationProvided: {
+      yes: true,
+      issuingAuthority: "MyiDemy"
+    },
+    prerequisites: "Strong background in mathematics, physics, or computer science",
+    projectBasedLearning: {
+      yes: true,
+      numberOfProjects: 4
+    },
+    courseOutline: [
+      "Quantum Computing Fundamentals",
+      "Quantum Algorithms",
+      "Quantum Programming with Qiskit",
+      "Quantum Machine Learning",
+      "Quantum Error Correction",
+      "Quantum Cryptography"
+    ],
+    instructor: {
+      name: "Dr. Anjali Gupta",
+      experience: "10 years",
+      notableProjects: "Published multiple papers on quantum algorithms",
+      rating: 4.9
+    },
+    mentorshipSupport: {
+      yes: true,
+      liveDoubtSolvingSessions: true
+    },
+    discussionForum: {
+      yes: true,
+      communityAccess: true
+    },
+    doubtResolutionTime: "Within 24 hours",
+    officeHours: "Available on weekdays",
+    careerSupport: {
+      resumeBuilding: true,
+      interviewPreparation: true,
+      internships: true
+    },
+    assignmentsAndQuizzes: {
+      yes: true,
+      weeklyAssignments: true,
+      mcqTests: true
+    },
+    installmentOptions: {
+      yes: true,
+      emiPlans: true
+    },
+    discountsAndOffers: {
+      earlyBirdDiscount: true,
+      referralBonus: true
+    },
+    scholarshipsAvailable: {
+      yes: true,
+      criteria: "Based on academic background and technical assessment"
+    },
+    overallRating: 4.8,
+    totalReviews: 65,
+    topReviews: [
+      "Cutting-edge content that gave me a strong foundation in quantum computing.",
+      "The instructor's expertise made complex concepts accessible."
+    ],
+    averageSalaryOfGraduates: "₹15 LPA - ₹25 LPA",
+    hiringPartners: [
+      "Quantum Computing Startups",
+      "Research Laboratories",
+      "Tech Giants"
+    ],
+    jobGuarantee: {
+      yes: true,
+      conditions: "Complete quantum algorithm project"
+    },
+    internshipOpportunities: {
+      yes: true,
+      partnerCompanies: [
+        "Quantum Research Labs",
+        "Quantum Computing Ventures"
+      ]
+    },
+    leaderboardAndBadges: true,
+    aiPoweredLearningRecommendations: true,
+    interactiveCodingPlatform: true,
+    images: [
+      "https://images.pexels.com/photos/1181298/pexels-photo-1181298.jpeg",
+      "https://images.pexels.com/photos/2156881/pexels-photo-2156881.jpeg",
+      "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg"
+    ],
+    featured: true
+  },
+  {
+    _id: ObjectId("67d6bf34455c6f6a3bd52ff8"),
+    service: "DevSecOps Mastery",
+    description: "Learn to integrate security practices into DevOps workflows for secure and efficient software delivery.",
+    price: "₹16,999 - ₹28,999",
+    provider: "MyiDemy",
+    icon: "Shield",
+    duration: "4 months",
+    skillLevel: "Intermediate to Advanced",
+    modeOfLearning: "Live Classes",
+    certificationProvided: {
+      yes: true,
+      issuingAuthority: "MyiDemy"
+    },
+    prerequisites: "Basic DevOps and security knowledge",
+    projectBasedLearning: {
+      yes: true,
+      numberOfProjects: 5
+    },
+    courseOutline: [
+      "DevSecOps Fundamentals",
+      "Secure Coding Practices",
+      "Automated Security Testing",
+      "Infrastructure as Code Security",
+      "Container Security",
+      "Compliance as Code"
+    ],
+    instructor: {
+      name: "Sanjay Reddy",
+      experience: "11 years",
+      notableProjects: "Implemented DevSecOps for major financial institutions",
+      rating: 4.8
+    },
+    mentorshipSupport: {
+      yes: true,
+      liveDoubtSolvingSessions: true
+    },
+    discussionForum: {
+      yes: true,
+      communityAccess: true
+    },
+    doubtResolutionTime: "Within 24 hours",
+    officeHours: "Available on weekdays",
+    careerSupport: {
+      resumeBuilding: true,
+      interviewPreparation: true,
+      internships: true
+    },
+    assignmentsAndQuizzes: {
+      yes: true,
+      weeklyAssignments: true,
+      mcqTests: true
+    },
+    installmentOptions: {
+      yes: true,
+      emiPlans: true
+    },
+    discountsAndOffers: {
+      earlyBirdDiscount: true,
+      referralBonus: true
+    },
+    scholarshipsAvailable: {
+      yes: true,
+      criteria: "Based on security competition achievements"
+    },
+    overallRating: 4.7,
+    totalReviews: 88,
+    topReviews: [
+      "Comprehensive coverage of security integration into CI/CD pipelines.",
+      "The hands-on labs with real vulnerabilities were extremely valuable."
+    ],
+    averageSalaryOfGraduates: "₹12 LPA - ₹20 LPA",
+    hiringPartners: [
+      "Security Companies",
+      "Cloud Providers",
+      "Financial Services"
+    ],
+    jobGuarantee: {
+      yes: true,
+      conditions: "Complete security pipeline project"
+    },
+    internshipOpportunities: {
+      yes: true,
+      partnerCompanies: [
+        "SecOps Solutions",
+        "Secure Cloud Inc."
+      ]
+    },
+    leaderboardAndBadges: true,
+    aiPoweredLearningRecommendations: true,
+    interactiveCodingPlatform: true,
+    images: [
+      "https://images.pexels.com/photos/2882566/pexels-photo-2882566.jpeg",
+      "https://images.pexels.com/photos/1181216/pexels-photo-1181216.jpeg",
+      "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg"
+    ],
+    featured: false
+  },
+  {
+    _id: ObjectId("67d6bf34455c6f6a3bd52ff9"),
+    service: "Natural Language Processing",
+    description: "Dive deep into NLP techniques to build intelligent language-processing applications and chatbots.",
+    price: "₹18,999 - ₹31,999",
+    provider: "MyiDemy",
+    icon: "MessageSquare",
+    duration: "4 months",
+    skillLevel: "Intermediate to Advanced",
+    modeOfLearning: "Live Classes",
+    certificationProvided: {
+      yes: true,
+      issuingAuthority: "MyiDemy"
+    },
+    prerequisites: "Python programming and basic machine learning knowledge",
+    projectBasedLearning: {
+      yes: true,
+      numberOfProjects: 5
+    },
+    courseOutline: [
+      "NLP Fundamentals",
+      "Text Processing and Feature Engineering",
+      "Word Embeddings and Language Models",
+      "Sequence Models for NLP",
+      "Transformer Models and BERT",
+      "Building Conversational AI and Chatbots"
+    ],
+    instructor: {
+      name: "Dr. Neha Sharma",
+      experience: "9 years",
+      notableProjects: "Built production NLP systems for e-commerce platforms",
+      rating: 4.9
+    },
+    mentorshipSupport: {
+      yes: true,
+      liveDoubtSolvingSessions: true
+    },
+    discussionForum: {
+      yes: true,
+      communityAccess: true
+    },
+    doubtResolutionTime: "Within 24 hours",
+    officeHours: "Available on weekdays",
+    careerSupport: {
+      resumeBuilding: true,
+      interviewPreparation: true,
+      internships: true
+    },
+    assignmentsAndQuizzes: {
+      yes: true,
+      weeklyAssignments: true,
+      mcqTests: true
+    },
+    installmentOptions: {
+      yes: true,
+      emiPlans: true
+    },
+    discountsAndOffers: {
+      earlyBirdDiscount: true,
+      referralBonus: true
+    },
+    scholarshipsAvailable: {
+      yes: true,
+      criteria: "Based on AI/ML projects"
+    },
+    overallRating: 4.8,
+    totalReviews: 102,
+    topReviews: [
+      "In-depth coverage of state-of-the-art NLP techniques.",
+      "The chatbot project was particularly valuable for my portfolio."
+    ],
+    averageSalaryOfGraduates: "₹12 LPA - ₹22 LPA",
+    hiringPartners: [
+      "AI Startups",
+      "Tech Giants",
+      "Research Labs"
+    ],
+    jobGuarantee: {
+      yes: true,
+      conditions: "Complete NLP application project"
+    },
+    internshipOpportunities: {
+      yes: true,
+      partnerCompanies: [
+        "Language AI",
+        "Semantic Tech"
+      ]
+    },
+    leaderboardAndBadges: true,
+    aiPoweredLearningRecommendations: true,
+    interactiveCodingPlatform: true,
+    images: [
+      "https://images.pexels.com/photos/7092613/pexels-photo-7092613.jpeg",
+      "https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg",
+      "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg"
+    ],
+    featured: true
+  }
+]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* Related Courses Section */}
+        {/* Placeholder for related courses - would be dynamically generated */}
+{/* 
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-6">You May Also Like</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="h-40 bg-gray-200"></div>
+                <div className="p-4">
+                  <h3 className="font-medium mb-2">Related Course {index}</h3>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Short description of the related course goes here...
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-600 font-medium">₹9,999</span>
+                    <div className="flex items-center">
+                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                      <span className="text-sm text-gray-600">4.5</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div> */}

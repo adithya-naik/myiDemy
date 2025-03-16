@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import NotFound from "./components/NotFound"
 import ScrollToTop from "./components/ScrollToTop"
+import CourseDetail from "./components/CourseDetail"
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/services" element={<Services/>} />
+          <Route path="/course/:id" element={<CourseDetail />} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
