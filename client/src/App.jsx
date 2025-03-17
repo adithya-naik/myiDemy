@@ -11,7 +11,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import NotFound from "./components/NotFound"
 import ScrollToTop from "./components/ScrollToTop"
-import CourseDetail from "./components/CourseDetail"
+import CourseDetail from "./components/CourseDetail";
 import Cart from "./pages/Cart"
 
 function App() {

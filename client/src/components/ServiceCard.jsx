@@ -248,9 +248,172 @@
 
 // contextAPI
 
+// import React from "react";
+// import * as LucideIcons from "lucide-react";
+// import { Star, Clock, Award, User, Share2, Heart } from "lucide-react";
+
+// const ServiceCard = ({
+//   service,
+//   onView,
+//   onEnroll,
+//   onWishlist,
+//   onShare,
+//   isWishlisted,
+//   isInCart,
+// }) => {
+//   // Function to dynamically get icon based on string name
+//   const getIcon = (iconName) => {
+//     // Check if the icon exists in LucideIcons
+//     const IconComponent = LucideIcons[iconName] || LucideIcons.BookOpen;
+//     return (
+//       <IconComponent
+//         size={26}
+//         className="group-hover:scale-110 transition-transform duration-300"
+//       />
+//     );
+//   };
+
+//   return (
+//     <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+//       <div className="relative">
+//         {/* Note: Image rendering is commented out as in your example */}
+//         {/* {service.images && service.images.length > 0 && (
+//           <img 
+//             src={service.images[0]} 
+//             alt={service.service} 
+//             className="w-full h-48 object-cover"
+//           />
+//         )} */}
+//         {service.featured && (
+//           <div className="absolute top-0 right-0 bg-yellow-500 text-white px-3 py-1 text-sm font-semibold">
+//             Featured
+//           </div>
+//         )}
+//       </div>
+
+//       <div className="p-5">
+//         <div className="flex items-center mb-2 group">
+//           <div className="bg-blue-100 p-2 rounded-full">
+//             {getIcon(service.icon)}
+//           </div>
+//           <h3 className="text-xl font-semibold text-gray-800 ml-2">
+//             {service.service}
+//           </h3>
+//         </div>
+
+//         <p className="text-gray-600 mt-3 mb-4 line-clamp-2">
+//           {service.description}
+//         </p>
+
+//         <div className="flex items-center justify-between mb-4">
+//           <div className="text-lg font-bold text-blue-600">{service.price}</div>
+//           <div className="flex items-center text-yellow-500">
+//             <Star className="h-4 w-4 fill-current" />
+//             <span className="ml-1 text-sm font-semibold">
+//               {service.overallRating} ({service.totalReviews})
+//             </span>
+//           </div>
+//         </div>
+
+//         <div className="flex flex-wrap gap-2 mb-4">
+//           <div className="bg-gray-100 rounded-full px-3 py-1 text-xs flex items-center">
+//             <Clock className="h-3 w-3 mr-1" />
+//             {service.duration}
+//           </div>
+//           <div className="bg-gray-100 rounded-full px-3 py-1 text-xs flex items-center">
+//             <Award className="h-3 w-3 mr-1" />
+//             {service.skillLevel}
+//           </div>
+//           <div className="bg-gray-100 rounded-full px-3 py-1 text-xs flex items-center">
+//             <User className="h-3 w-3 mr-1" />
+//             {service.modeOfLearning}
+//           </div>
+//         </div>
+
+//         {service.instructor && (
+//           <div className="border-t border-gray-200 pt-3 mb-4">
+//             <div className="flex items-center">
+//               <div className="bg-gray-200 rounded-full h-8 w-8 flex items-center justify-center">
+//                 <User className="h-4 w-4 text-gray-500" />
+//               </div>
+//               <div className="ml-2">
+//                 <p className="text-sm font-semibold">
+//                   {service.instructor.name}
+//                 </p>
+//                 <div className="flex items-center">
+//                   <Star className="h-3 w-3 text-yellow-500" />
+//                   <span className="text-xs text-gray-500 ml-1">
+//                     {service.instructor.rating}
+//                   </span>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         )}
+
+//         <div className="flex justify-between mt-4">
+//           <button
+//             onClick={onWishlist}
+//             className={`flex items-center justify-center w-1/2 mr-2 py-2 rounded-md font-medium ${
+//               isWishlisted
+//                 ? "bg-red-50 text-red-600 border border-red-200"
+//                 : "bg-gray-50 text-gray-700 border border-gray-200"
+//             }`}
+//           >
+//             <Heart
+//               className={`h-4 w-4 mr-2 ${isWishlisted ? "fill-current" : ""}`}
+//             />
+//             Wishlist
+//           </button>
+//           <button
+//             onClick={onShare}
+//             className="flex items-center justify-center w-1/2 ml-2 py-2 bg-gray-50 text-gray-700 rounded-md font-medium border border-gray-200"
+//           >
+//             <Share2 className="h-4 w-4 mr-2" />
+//             Share
+//           </button>
+//         </div>
+
+//         <div className="flex space-x-3 mt-4">
+//           <button
+//             onClick={onView}
+//             className="flex-1 bg-white border border-blue-600 text-blue-600 py-2 rounded-md hover:bg-blue-50 transition-colors text-sm font-medium"
+//           >
+//             View Course
+//           </button>
+//           <button
+//             onClick={onEnroll}
+//             className={`flex-1 py-2 rounded-md transition-colors text-sm font-medium ${
+//               isInCart
+//                 ? "bg-green-600 hover:bg-green-700 text-white"
+//                 : "bg-blue-600 hover:bg-blue-700 text-white"
+//             }`}
+//           >
+//             {isInCart ? "In Cart" : "Enroll Now"}
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ServiceCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React from "react";
 import * as LucideIcons from "lucide-react";
-import { Star, Clock, Award, User, Share2, Heart } from "lucide-react";
+import { Star, Clock, Award, User, Share2, Heart } from 'lucide-react';
 
 const ServiceCard = ({
   service,
@@ -279,7 +442,7 @@ const ServiceCard = ({
         {/* Note: Image rendering is commented out as in your example */}
         {/* {service.images && service.images.length > 0 && (
           <img 
-            src={service.images[0]} 
+            src={service.images[0] || "/placeholder.svg"} 
             alt={service.service} 
             className="w-full h-48 object-cover"
           />
