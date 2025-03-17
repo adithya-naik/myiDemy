@@ -515,19 +515,16 @@ const ServiceCard = ({
         )}
 
         <div className="flex justify-between mt-4">
-          <button
-            onClick={onWishlist}
-            className={`flex items-center justify-center w-1/2 mr-2 py-2 rounded-md font-medium ${
-              isWishlisted
-                ? "bg-red-50 text-red-600 border border-red-200"
-                : "bg-gray-50 text-gray-700 border border-gray-200"
-            }`}
-          >
-            <Heart
-              className={`h-4 w-4 mr-2 ${isWishlisted ? "fill-current" : ""}`}
-            />
-            Wishlist
-          </button>
+        <button
+      onClick={() => handleWishlist(service)}
+      className={`${
+        isInWishlist(service._id)
+          ? "bg-red-600"
+          : "bg-gray-600 hover:bg-gray-700"
+      } text-white px-4 py-2 rounded ml-2`}
+    >
+      {isInWishlist(service._id) ? "In Wishlist" : "Add to Wishlist"}
+    </button>
           <button
             onClick={onShare}
             className="flex items-center justify-center w-1/2 ml-2 py-2 bg-gray-50 text-gray-700 rounded-md font-medium border border-gray-200"
@@ -545,15 +542,15 @@ const ServiceCard = ({
             View Course
           </button>
           <button
-            onClick={onEnroll}
-            className={`flex-1 py-2 rounded-md transition-colors text-sm font-medium ${
-              isInCart
-                ? "bg-green-600 hover:bg-green-700 text-white"
-                : "bg-blue-600 hover:bg-blue-700 text-white"
-            }`}
-          >
-            {isInCart ? "In Cart" : "Enroll Now"}
-          </button>
+      onClick={() => handleEnroll(service)}
+      className={`${
+        isInCart(service._id)
+          ? "bg-green-600"
+          : "bg-blue-600 hover:bg-blue-700"
+      } text-white px-4 py-2 rounded`}
+    >
+      {isInCart(service._id) ? "In Cart" : "Enroll Now"}
+    </button>
         </div>
       </div>
     </div>
