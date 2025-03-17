@@ -3,7 +3,7 @@ const router = express.Router();
 const Product = require("../models/service-schema");
 const Cart = require('../models/cart-schema');
 const Wishlist = require('../models/wishlist-schema');
-const Purchase = require('../models/Purchase-schema');
+const Purchase = require('../models/purchase-schema');
 
 // Middleware to check if userId is provided
 const checkUserId = (req, res, next) => {
