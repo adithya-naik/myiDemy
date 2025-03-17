@@ -766,37 +766,27 @@ import ServiceCard from "../components/ServiceCard";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Loader2, AlertTriangle, RefreshCw } from 'lucide-react';
-// In your Services.jsx where you have the enroll button
 import { useCart } from "../store/cart";
-import { useAuth } from "../store/auth";
 
 const Services = () => {
   const [services, setServices] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const { addToCart, addToWishlist, isInCart, isInWishlist } = useCart();
-  const { isLoggedIn } = useAuth();
+  
   useEffect(() => {
     document.documentElement.scrollTop = 0; // For older browsers
     document.body.scrollTop = 0;
   }, []);
-  const handleEnroll = async (service) => {
-    if (!isLoggedIn) {
-      toast.error("Please login to enroll");
-      return;
-    }
-    await addToCart(service);
-  };
-
-  const handleWishlist = async (service) => {
-    if (!isLoggedIn) {
-      toast.error("Please login to add to wishlist");
-      return;
-    }
-    await addToWishlist(service);
-  };
+  
   // Use the cart context with the updated functions
- 
+  const { 
+    handleEnroll, 
+    handleWishlist, 
+    handleShare, 
+    isInWishlist, 
+    isInCart 
+  } = useCart();
+
   useEffect(() => {
     const fetchServices = async () => {
       setLoading(true);
