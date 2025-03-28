@@ -28,7 +28,7 @@ export default function Testimonials() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/testimonials/getAll")
+    fetch("https://myidemy.onrender.com/api/testimonials/getAll")
       .then((response) => response.json())
       .then((data) => {
         setTestimonials(data.response);

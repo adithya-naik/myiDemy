@@ -8,7 +8,7 @@ const Team = () => {
   useEffect(() => {
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/team/getAll");
+        const response = await fetch("https://myidemy.onrender.com/api/team/getAll");
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

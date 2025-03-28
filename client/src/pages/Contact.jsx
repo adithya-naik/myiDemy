@@ -47,7 +47,7 @@ export default function ContactForm() {
     setValidationErrors({});
     
     try {
-      const response = await fetch('http://localhost:3000/api/form/contact', {
+      const response = await fetch('https://myidemy.onrender.com/api/form/contact', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',

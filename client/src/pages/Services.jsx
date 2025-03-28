@@ -368,7 +368,7 @@ import ServiceCard from "../components/ServiceCard";
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-  fetch("http://localhost:3000/api/data/service") // Update with your actual API endpoint
+  fetch("https://myidemy.onrender.com/api/data/service") // Update with your actual API endpoint
     .then((response) => response.json())
     .then((data) => setServices(data.response)) // Extract the 'response' array
     .catch((error) => console.error("Error fetching courses:", error));
