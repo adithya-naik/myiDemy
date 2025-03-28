@@ -359,6 +359,9 @@
 //   );
 // }
 
+
+
+
 import { useEffect, useState } from "react";
 import ServiceCard from "../components/ServiceCard";
 
@@ -371,10 +374,10 @@ const Services = () => {
     .catch((error) => console.error("Error fetching courses:", error));
 }, []);
 
-
+console.log(services);
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-4xl p-2 font-bold text-gray-800 mb-6">Our Courses</h2>
+      <h2 className="text-4xl p-2 font-bold text-gray-800 mb-6">Our Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <ServiceCard
@@ -384,6 +387,12 @@ const Services = () => {
             price={service.price}
             icon={service.icon}
             provider={service.provider}
+
+            modeOfLearning={service.modeOfLearning}
+            overallRating={service.overallRating}
+            totalReviews={service.totalReviews}
+            skillLevel={service.skillLevel}
+            duration={service.duration}
             // providerImage={service.providerImage}
           />
         ))}

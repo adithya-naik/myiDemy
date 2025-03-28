@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import NotFound from "./components/NotFound"
 import ScrollToTop from "./components/ScrollToTop"
+import { PrivacyPolicy, TermsOfService, CookiePolicy } from './components/PolicyComponents';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
           <Route path="/logout" element={<Logout/>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-of-service" element={<TermsOfService />} />
+      <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
         <Footer />

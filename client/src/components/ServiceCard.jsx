@@ -29,46 +29,90 @@
 // };
 
 // export default ServiceCard;
-import React from "react";
-import logo from "../assets/myidemy-logo.png";
-import * as LucideIcons from "lucide-react";
 
-const ServiceCard = ({ service, description, price, icon, provider }) => {
+
+import React from "react";
+import * as LucideIcons from "lucide-react";
+import { Star, BookOpen, Clock, TrendingUp } from "lucide-react";
+
+const ServiceCard = ({ 
+  service, 
+  description, 
+  price, 
+  icon, 
+  provider,
+  modeOfLearning,
+  overallRating,
+  totalReviews,
+  skillLevel,
+  duration
+}) => {
   const IconComponent = LucideIcons[icon] || LucideIcons.Code;
 
   return (
-    <div className="group relative p-6 cursor-pointer bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300 hover:shadow-lg hover:border-blue-200">
-      {/* Top section with icon and service name */}
-      <div className="flex items-center gap-4 mb-4">
-        <div className="p-3 bg-blue-800 text-white rounded-lg flex items-center justify-center">
-          <IconComponent size={26} className="group-hover:scale-110 transition-transform duration-300" />
+    <div className="bg-white border cursor-pointer border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2">
+      {/* Header with Icon and Service Name */}
+      <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-4 flex items-center space-x-4">
+        <div className="bg-white/20 p-3 rounded-lg">
+          <IconComponent size={28} className="text-white" />
         </div>
-        <h3 className="text-xl font-bold text-gray-800 group-hover:text-blue-700 transition-colors duration-300">{service}</h3>
+        <h3 className="text-xl font-bold text-white truncate">{service}</h3>
       </div>
-      
-      {/* Description */}
-      <p className="text-gray-600 leading-relaxed mb-6">{description}</p>
-      
-      {/* Bottom section with provider and price */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-        {/* Provider image and name */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-200">
-            <img
-              src={logo}
-              alt={provider}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          {/* <span className="text-sm font-medium text-gray-700">{provider}</span> */}
+
+      {/* Content Area */}
+      <div className="p-5">
+        {/* Description */}
+        <p className="text-gray-600 mb-4 min-h-[72px] line-clamp-3">{description}</p>
+
+        {/* Service Details Grid */}
+        <div className="grid grid-cols-2 gap-3 mb-4">
+          {modeOfLearning && (
+            <div className="flex items-center space-x-2 text-sm text-gray-700">
+              <BookOpen size={16} className="text-blue-500" />
+              <span>{modeOfLearning}</span>
+            </div>
+          )}
+          {skillLevel && (
+            <div className="flex items-center space-x-2 text-sm text-gray-700">
+              <TrendingUp size={16} className="text-green-500" />
+              <span>{skillLevel}</span>
+            </div>
+          )}
+          {duration && (
+            <div className="flex items-center space-x-2 text-sm text-gray-700">
+              <Clock size={16} className="text-purple-500" />
+              <span>{duration}</span>
+            </div>
+          )}
         </div>
 
-        {/* Price and enroll button - now with more spacing */}
-        <div className="flex items-center gap-4">
-          <span className="text-lg font-bold text-blue-600">{price}</span>
-          <button className="px-5 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 active:bg-blue-800 transition-all duration-300">
-            Enroll
-          </button>
+        {/* Rating Section */}
+        {overallRating && (
+          <div className="flex items-center space-x-2 mb-4">
+            <div className="flex items-center">
+              {[...Array(5)].map((_, i) => (
+                <Star 
+                  key={i} 
+                  size={20} 
+                  className={`${i < Math.round(overallRating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
+                />
+              ))}
+            </div>
+            <span className="text-sm text-gray-600">
+              ({overallRating.toFixed(1)}) • {totalReviews} Reviews
+            </span>
+          </div>
+        )}
+
+        {/* Bottom Section */}
+        <div className="flex items-center justify-between border-t pt-4 mt-4">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+              <span className="text-blue-800 font-bold">{provider.charAt(0)}</span>
+            </div>
+            <span className="text-sm font-medium text-gray-700">{provider}</span>
+          </div>
+          <div className="text-lg font-bold text-blue-600">{price}</div>
         </div>
       </div>
     </div>

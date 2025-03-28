@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import Faq from "react-faq-component";
@@ -19,8 +19,8 @@ import { useAuth } from "../store/auth";
 // npm install react-slick slick-carousel react-faq-component
 
 const Home = () => {
-  const {userData} = useAuth();
-  const [greetName,setGreetName] = useState();
+  const { userData } = useAuth();
+  const [greetName, setGreetName] = useState();
   useEffect(() => {
     if (userData && userData.username) {
       setGreetName(userData.username);
@@ -100,7 +100,7 @@ const Home = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
-      <GreetingCard name = {greetName}/>
+            <GreetingCard name={greetName} />
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Master Modern Development Skills with{" "}
               <span className="text-blue-600">myiDemy</span>
@@ -113,7 +113,7 @@ const Home = () => {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Link
-                to="/courses"
+                to="/services"
                 className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors flex items-center"
               >
                 Explore Courses <ChevronRight className="ml-2 w-4 h-4" />
@@ -191,115 +191,6 @@ const Home = () => {
 
       <Testimonials />
 
-      {/* Testimonials Section */}
-      {/* <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">
-            What Our Students Say
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            Thousands of developers have accelerated their careers with myidemy. Read their stories.
-          </p>
-          <div className="px-4 md:px-8">
-            <Slider {...sliderSettings}>
-                <div className="bg-white rounded-lg shadow-md p-6 h-full flex flex-col">
-                  <div className="flex items-center text-yellow-400 mb-4">
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                  </div>
-                  <p className="text-gray-600 italic mb-6 flex-grow">
-                    "The React course on myidemy completely transformed my career. I went from struggling with basic JS to building complex applications in just 3 months. The instructor's approach made complex concepts easy to understand."
-                  </p>
-                  <div className="flex items-center mt-auto">
-                    <div className="bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center text-blue-600 font-bold mr-4">
-                      JS
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Jamie Smith</h4>
-                      <p className="text-gray-500 text-sm">Frontend Developer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <div className="bg-white rounded-lg shadow-md p-6 h-full flex flex-col">
-                  <div className="flex items-center text-yellow-400 mb-4">
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                  </div>
-                  <p className="text-gray-600 italic mb-6 flex-grow">
-                    "The Python Data Science track was exactly what I needed to switch careers. The projects are real-world focused, and I was able to build a portfolio that helped me land a job as a data analyst within weeks of completion."
-                  </p>
-                  <div className="flex items-center mt-auto">
-                    <div className="bg-indigo-100 rounded-full w-12 h-12 flex items-center justify-center text-indigo-600 font-bold mr-4">
-                      LP
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Lisa Park</h4>
-                      <p className="text-gray-500 text-sm">Data Analyst</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="p-4">
-                <div className="bg-white rounded-lg shadow-md p-6 h-full flex flex-col">
-                  <div className="flex items-center text-yellow-400 mb-4">
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                  </div>
-                  <p className="text-gray-600 italic mb-6 flex-grow">
-                    "As a self-taught developer, I had many knowledge gaps. The Full Stack JavaScript course filled those gaps and gave me the confidence to apply for senior roles. The community support was amazing too!"
-                  </p>
-                  <div className="flex items-center mt-auto">
-                    <div className="bg-purple-100 rounded-full w-12 h-12 flex items-center justify-center text-purple-600 font-bold mr-4">
-                      MJ
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Miguel Johnson</h4>
-                      <p className="text-gray-500 text-sm">Senior Developer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="p-4">
-                <div className="bg-white rounded-lg shadow-md p-6 h-full flex flex-col">
-                  <div className="flex items-center text-yellow-400 mb-4">
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                    <Star className="fill-current w-5 h-5" />
-                  </div>
-                  <p className="text-gray-600 italic mb-6 flex-grow">
-                    "I tried many learning platforms before finding myidemy. The difference is night and day. The instructors actually care about your learning, and the hands-on projects helped me build a portfolio that employers noticed immediately."
-                  </p>
-                  <div className="flex items-center mt-auto">
-                    <div className="bg-green-100 rounded-full w-12 h-12 flex items-center justify-center text-green-600 font-bold mr-4">
-                      SC
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Sarah Chen</h4>
-                      <p className="text-gray-500 text-sm">Mobile Developer</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Slider>
-          </div>
-        </div>
-      </section> */}
-
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600 text-white">
         <div className="container mx-auto text-center">
@@ -313,17 +204,22 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              to="/courses"
+              to="/services"
               className="px-8 py-3 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50 transition-colors"
             >
               Browse Courses
             </Link>
-            <Link
-              to="/register"
-              className="px-8 py-3 bg-blue-800 text-white font-medium rounded-md hover:bg-blue-900 transition-colors flex items-center justify-center"
-            >
-              Sign Up Free <Award className="ml-2 w-5 h-5" />
-            </Link>
+            {!userData && (
+
+              <>
+                <Link
+                  to="/register"
+                  className="px-8 py-3 bg-blue-800 text-white font-medium rounded-md hover:bg-blue-900 transition-colors flex items-center justify-center"
+                >
+                  Sign Up Free <Award className="ml-2 w-5 h-5" />
+                </Link>
+              </>
+            )}
           </div>
           <p className="text-blue-200 mt-6">
             No credit card required. Start with free lessons today.
