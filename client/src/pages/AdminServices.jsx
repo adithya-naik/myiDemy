@@ -1,5 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { FaEdit, FaTrash, FaPlus } from "react-icons/fa";
+import { 
+  Edit,
+  Trash2,
+  Plus,
+  Search,
+  ArrowUpDown,
+  Code,
+  BookOpen,
+  Video,
+  Users,
+  Laptop,
+  Rocket,
+  PenTool,
+  Database,
+  Camera,
+  Languages,
+  Presentation,
+  Award,
+  ClipboardList
+} from "lucide-react";
 
 const AdminServices = () => {
   const [services, setServices] = useState([]);
@@ -17,6 +36,10 @@ const AdminServices = () => {
     skillLevel: "",
     duration: ""
   });
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortConfig, setSortConfig] = useState({ key: "service", direction: "ascending" });
+  const [currentPage, setCurrentPage] = useState(1);
+  const [resultsPerPage, setResultsPerPage] = useState(5);
 
   useEffect(() => {
     fetchServices();
@@ -34,12 +57,20 @@ const AdminServices = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setCurrentService({
-      ...currentService,
-      [name]: name === "price" || name === "overallRating" || name === "totalReviews" 
-        ? parseFloat(value) 
-        : value
-    });
+    if (name === "price") {
+      // Handle price as string with currency symbol
+      setCurrentService({
+        ...currentService,
+        [name]: value
+      });
+    } else {
+      setCurrentService({
+        ...currentService,
+        [name]: name === "overallRating" || name === "totalReviews" 
+          ? parseFloat(value) 
+          : value
+      });
+    }
   };
 
   const resetForm = () => {
@@ -124,98 +155,238 @@ const AdminServices = () => {
     }
   };
 
-  return (
-    <div className="container mx-auto p-6">
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="text-4xl p-2 font-bold text-gray-800">Manage Services</h2>
-        <button
-          onClick={() => openModal()}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex items-center"
-        >
-          <FaPlus className="mr-2" /> Add New Service
-        </button>
-      </div>
+  // Sort function
+  const requestSort = (key) => {
+    let direction = 'ascending';
+    if (sortConfig.key === key && sortConfig.direction === 'ascending') {
+      direction = 'descending';
+    }
+    setSortConfig({ key, direction });
+  };
 
-      {/* Services List */}
-      <div className="bg-white shadow-md rounded-lg overflow-hidden">
-        <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
-            <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Service
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Provider
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Price
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Rating
-              </th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Actions
-              </th>
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
-            {services && services.length > 0 ? (
-              services.map((service) => (
-                <tr key={service._id}>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="flex items-center">
-                      <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-gray-100 rounded-full">
-                        <i className={`${service.icon} text-xl text-gray-600`}></i>
-                      </div>
-                      <div className="ml-4">
-                        <div className="text-sm font-medium text-gray-900">
-                          {service.service}
+  // Get sorted and filtered data
+  const getSortedAndFilteredData = () => {
+    const filteredData = services.filter(service => 
+      service.service.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.provider.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    
+    if (!sortConfig.key) return filteredData;
+    
+    return [...filteredData].sort((a, b) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+        return sortConfig.direction === 'ascending' ? -1 : 1;
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === 'ascending' ? 1 : -1;
+      }
+      return 0;
+    });
+  };
+
+  // Pagination
+  const indexOfLastResult = currentPage * resultsPerPage;
+  const indexOfFirstResult = indexOfLastResult - resultsPerPage;
+  const sortedAndFilteredData = getSortedAndFilteredData();
+  const currentResults = sortedAndFilteredData.slice(indexOfFirstResult, indexOfLastResult);
+
+  // Get appropriate icon component based on icon name
+  const getIconComponent = (iconName) => {
+    const iconMap = {
+      "Code": <Code size={20} />,
+      "BookOpen": <BookOpen size={20} />,
+      "Video": <Video size={20} />,
+      "Users": <Users size={20} />,
+      "Laptop": <Laptop size={20} />,
+      "Rocket": <Rocket size={20} />,
+      "PenTool": <PenTool size={20} />,
+      "Database": <Database size={20} />,
+      "Camera": <Camera size={20} />,
+      "Languages": <Languages size={20} />,
+      "Presentation": <Presentation size={20} />,
+      "Award": <Award size={20} />
+    };
+    
+    return iconMap[iconName] || <Code size={20} />;
+  };
+
+  return (
+    <div className="container mx-auto">
+      <div className="py-8">
+        <div className="flex flex-row justify-between space-x-3 w-full mb-1 sm:mb-0">
+         <div className="flex items-center">
+          <ClipboardList className="mr-2" size={24} />
+          <h2 className="text-2xl font-bold">Services Management</h2>
+          
+         </div>
+          <div className="text-end">
+            <form className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-3">
+              <div className="flex flex-row">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="rounded-l px-4 py-2 border border-gray-300 focus:outline-none"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <button type="button" className="rounded-r px-4 py-2 border-t border-r border-b border-gray-300 bg-gray-50">
+                  <Search size={20} className="text-gray-600" />
+                </button>
+              </div>
+              <div className="flex">
+                <select
+                  className="px-4 py-2 border border-gray-300 rounded-l focus:outline-none"
+                  value={resultsPerPage}
+                  onChange={(e) => setResultsPerPage(Number(e.target.value))}
+                >
+                  <option value={5}>5</option>
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                </select>
+                <button
+                  type="button"
+                  onClick={() => openModal()}
+                  className="flex items-center justify-center px-4 py-2 bg-blue-600 border border-blue-600 rounded-r text-white hover:bg-blue-700"
+                >
+                  <Plus size={20} className="mr-2" />
+                  <span>Add</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div className="bg-white shadow-md rounded my-6 overflow-x-auto">
+          <table className="min-w-full bg-white">
+            <thead className="bg-gray-800 text-white">
+              <tr>
+                <th className="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">
+                  <button
+                    onClick={() => requestSort('service')}
+                    className="flex items-center"
+                  >
+                    Service <ArrowUpDown size={14} className="ml-1" />
+                  </button>
+                </th>
+                <th className="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">
+                  <button
+                    onClick={() => requestSort('provider')}
+                    className="flex items-center"
+                  >
+                    Provider <ArrowUpDown size={14} className="ml-1" />
+                  </button>
+                </th>
+                <th className="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">
+                  <button
+                    onClick={() => requestSort('price')}
+                    className="flex items-center"
+                  >
+                    Price <ArrowUpDown size={14} className="ml-1" />
+                  </button>
+                </th>
+                <th className="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">
+                  <button
+                    onClick={() => requestSort('duration')}
+                    className="flex items-center"
+                  >
+                    Duration <ArrowUpDown size={14} className="ml-1" />
+                  </button>
+                </th>
+                <th className="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">
+                  <button
+                    onClick={() => requestSort('overallRating')}
+                    className="flex items-center"
+                  >
+                    Rating <ArrowUpDown size={14} className="ml-1" />
+                  </button>
+                </th>
+                <th className="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              {currentResults.length > 0 ? (
+                currentResults.map((service) => (
+                  <tr key={service._id} className="border-b hover:bg-gray-50">
+                    <td className="py-3 px-4">
+                      <div className="flex items-center">
+                        <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-blue-100 rounded-full">
+                          {getIconComponent(service.icon)}
                         </div>
-                        <div className="text-sm text-gray-500">
-                          {service.skillLevel} - {service.duration}
+                        <div className="ml-3">
+                          <div className="text-sm font-medium text-gray-900">
+                            {service.service}
+                          </div>
+                          <div className="text-sm text-gray-500">
+                            {service.skillLevel}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{service.provider}</div>
-                    <div className="text-sm text-gray-500">
-                      {service.modeOfLearning}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{service.price}</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">
-                      {service.overallRating} ({service.totalReviews} reviews)
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button
-                      onClick={() => openModal(service)}
-                      className="text-blue-600 hover:text-blue-900 mr-4"
-                    >
-                      <FaEdit size={18} />
-                    </button>
-                    <button
-                      onClick={() => handleDelete(service._id)}
-                      className="text-red-600 hover:text-red-900"
-                    >
-                      <FaTrash size={18} />
-                    </button>
+                    </td>
+                    <td className="py-3 px-4">
+                      <div className="flex items-center">
+                        <div>
+                          <div className="text-sm font-medium text-gray-900">{service.provider}</div>
+                          <div className="text-sm text-gray-500">{service.modeOfLearning}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-3 px-4">{service.price}</td>
+                    <td className="py-3 px-4">{service.duration}</td>
+                    <td className="py-3 px-4">
+                      {service.overallRating} ({service.totalReviews})
+                    </td>
+                    <td className="py-3 px-4">
+                      <div className="flex items-center space-x-4">
+                        <button
+                          className="text-blue-500 hover:text-blue-600"
+                          onClick={() => openModal(service)}
+                        >
+                          <Edit size={20} />
+                        </button>
+                        <button
+                          className="text-red-500 hover:text-red-600"
+                          onClick={() => handleDelete(service._id)}
+                        >
+                          <Trash2 size={20} />
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="6" className="py-8 text-center text-gray-500">
+                    No services found
                   </td>
                 </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="5" className="px-6 py-4 text-center text-gray-500">
-                  No services found
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+              )}
+            </tbody>
+          </table>
+
+          {/* Pagination */}
+          <div className="border-t px-5 py-3 flex flex-col xs:flex-row items-center xs:justify-between">
+            <span className="text-xs xs:text-sm text-gray-900">
+              Showing {indexOfFirstResult + 1} to {Math.min(indexOfLastResult, sortedAndFilteredData.length)} of {sortedAndFilteredData.length} entries
+            </span>
+            <div className="inline-flex mt-2 xs:mt-0">
+              <button
+                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l"
+                onClick={() => setCurrentPage(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                Prev
+              </button>
+              <button
+                className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-r"
+                onClick={() => setCurrentPage(currentPage + 1)}
+                disabled={indexOfLastResult >= sortedAndFilteredData.length}
+              >
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Modal Form */}
@@ -225,7 +396,7 @@ const AdminServices = () => {
             <h3 className="text-2xl font-bold mb-6">
               {isEditMode ? "Edit Service" : "Add New Service"}
             </h3>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -236,7 +407,7 @@ const AdminServices = () => {
                     name="service"
                     value={currentService.service}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     required
                   />
                 </div>
@@ -249,36 +420,49 @@ const AdminServices = () => {
                     name="provider"
                     value={currentService.provider}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     required
                   />
                 </div>
                 <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2">
-                    Price
-                  </label>
-                  <input
-                    type="number"
-                    name="price"
-                    value={currentService.price}
-                    onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label className="block text-gray-700 text-sm font-bold mb-2">
-                    Icon Class
+                    Price (with currency ₹ symbol)
                   </label>
                   <input
                     type="text"
+                    name="price"
+                    value={currentService.price}
+                    onChange={handleInputChange}
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                    placeholder="₹12,999"
+                    required
+                  />
+                </div>
+                <div className="mb-4">
+                  <label className="block text-gray-700 text-sm font-bold mb-2">
+                    Icon
+                  </label>
+                  <select
                     name="icon"
                     value={currentService.icon}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="e.g. fas fa-code"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     required
-                  />
+                  >
+                    <option value="">Select Icon</option>
+                    <option value="Code">Code</option>
+                    <option value="BookOpen">Book Open</option>
+                    <option value="Video">Video</option>
+                    <option value="Users">Users</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Rocket">Rocket</option>
+                    <option value="PenTool">Pen Tool</option>
+                    <option value="Database">Database</option>
+                    <option value="Camera">Camera</option>
+                    <option value="Languages">Languages</option>
+                    <option value="Presentation">Presentation</option>
+                    <option value="Award">Award</option>
+                  </select>
                 </div>
                 <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -289,7 +473,7 @@ const AdminServices = () => {
                     name="modeOfLearning"
                     value={currentService.modeOfLearning}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     placeholder="Online, In-person, Hybrid"
                     required
                   />
@@ -298,15 +482,19 @@ const AdminServices = () => {
                   <label className="block text-gray-700 text-sm font-bold mb-2">
                     Skill Level
                   </label>
-                  <input
-                    type="text"
+                  <select
                     name="skillLevel"
                     value={currentService.skillLevel}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="Beginner, Intermediate, Advanced"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     required
-                  />
+                  >
+                    <option value="">Select Skill Level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                    <option value="All Levels">All Levels</option>
+                  </select>
                 </div>
                 <div className="mb-4">
                   <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -317,8 +505,8 @@ const AdminServices = () => {
                     name="duration"
                     value={currentService.duration}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    placeholder="e.g. 8 weeks"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
+                    placeholder="e.g. 3 months"
                     required
                   />
                 </div>
@@ -331,7 +519,7 @@ const AdminServices = () => {
                     name="overallRating"
                     value={currentService.overallRating}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     min="0"
                     max="5"
                     step="0.1"
@@ -347,7 +535,7 @@ const AdminServices = () => {
                     name="totalReviews"
                     value={currentService.totalReviews}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     min="0"
                     required
                   />
@@ -360,7 +548,7 @@ const AdminServices = () => {
                     name="description"
                     value={currentService.description}
                     onChange={handleInputChange}
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none"
                     rows="4"
                     required
                   ></textarea>

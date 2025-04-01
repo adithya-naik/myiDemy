@@ -151,7 +151,6 @@ const deleteContact = async (req, res) => {
 
 // Services
 
-
 const fetchServices = async (req, res) => {
   try {
     const services = await Service.find();
@@ -168,7 +167,7 @@ const createService = async (req, res) => {
     const serviceData = req.body;
     const newService = new Service(serviceData);
     const savedService = await newService.save();
-
+    
     res.status(201).json({
       message: "Service created successfully",
       service: savedService
@@ -184,7 +183,7 @@ const updateService = async (req, res) => {
   try {
     const serviceId = req.params.serviceId;
     const updatedData = req.body;
-
+    
     const updatedService = await Service.findByIdAndUpdate(
       serviceId,
       updatedData,
