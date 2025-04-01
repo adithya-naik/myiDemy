@@ -8,6 +8,7 @@ const contactRouter = require("./routes/contact-router")
 const serviceRouter = require("./routes/service-router")
 const testimonialRouter = require("./routes/testimonial-router")
 const teamMembersRouter = require("./routes/teamMember-router")
+const adminRouter = require("./routes/admin-router")
 
 const connectDB = require("./utils/db")
 // this middleware is compulsory for handling json type of data through out the app ...thisnshould be used beore all the routes that we have so that all the routes are able to access it   without any problems .... dont forget to use this..else we dont get the intended response from the server...as we mainly use json format data
@@ -27,6 +28,8 @@ app.use("/api/form", contactRouter)
 app.use("/api/data", serviceRouter)
 app.use("/api/testimonials", testimonialRouter)
 app.use("/api/team", teamMembersRouter)
+app.use("/api/admin", adminRouter)
+
 
 app.get('/', (req, res) => {
   res.send(`

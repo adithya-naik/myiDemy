@@ -1,4 +1,4 @@
-import { createContext, useContext, useState,useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext();
 
@@ -6,10 +6,11 @@ export const AuthProvider = ({ children }) => {
   const [userData, setUserData] = useState(null);
   const [token, setToken] = useState(localStorage.getItem("token"));
 
+  const authorizationToken = `Bearer ${token}`;
   const storeTokenInLS = (Token) => {
-    setToken(Token)
+    setToken(Token);
     return localStorage.setItem("token", Token);
-  };  
+  };
 
   // logout the user
 
@@ -27,19 +28,22 @@ export const AuthProvider = ({ children }) => {
       console.log("No token found. User is not authenticated.");
       return;
     }
-  
+
     try {
-      const response = await fetch("https://myidemy.onrender.com/api/auth/getUserDetails", {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-  
+      const response = await fetch(
+        "https://myidemy.onrender.com/api/auth/getUserDetails",
+        {
+          method: "GET",
+          headers: {
+            Authorization: authorizationToken,
+          },
+        }
+      );
+
       if (!response.ok) {
         throw new Error(`Error: ${response.status} - ${response.statusText}`);
       }
-  
+
       const data = await response.json();
       console.log("User data from server:", data);
       setUserData(data);
@@ -47,14 +51,20 @@ export const AuthProvider = ({ children }) => {
       console.error("Failed to fetch user details:", error);
     }
   };
-  
+
   useEffect(() => {
     getUserDetails();
   }, [token]); // Added token dependency
-  
+
   return (
     <AuthContext.Provider
-      value={{ storeTokenInLS, logoutUser, isLoggedIn, userData }}
+      value={{
+        storeTokenInLS,
+        logoutUser,
+        isLoggedIn,
+        userData,
+        authorizationToken,
+      }}
     >
       {children}
     </AuthContext.Provider>
