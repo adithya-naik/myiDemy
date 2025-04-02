@@ -12,7 +12,7 @@ const AdminContacts = () => {
     const fetchContacts = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/api/admin/contacts', {
+        const response = await fetch('https://myidemy.onrender.com/api/admin/contacts', {
           method: 'GET',
         });
 
@@ -37,7 +37,7 @@ const AdminContacts = () => {
 
     if (confirmation) {
       try {
-        const response = await fetch(`http://localhost:3000/api/admin/contacts/delete/${contactId}`, {
+        const response = await fetch(`https://myidemy.onrender.com/api/admin/contacts/delete/${contactId}`, {
           method: 'DELETE',
         });
 

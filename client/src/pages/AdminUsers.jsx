@@ -16,7 +16,7 @@ const navigate = useNavigate()
     const fetchUsers = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:3000/api/admin/users', {
+        const response = await fetch('https://myidemy.onrender.com/api/admin/users', {
           method: 'GET',
           headers: {
             Authorization: authorizationToken,
@@ -50,7 +50,7 @@ const navigate = useNavigate()
     
     if (confirmation) {
       try {
-        const response = await fetch(`http://localhost:3000/api/admin/users/delete/${userId}`, {
+        const response = await fetch(`https://myidemy.onrender.com/api/admin/users/delete/${userId}`, {
           method: 'DELETE',
          
         });

@@ -6,7 +6,9 @@ import {
   MessageSquare, 
   ClipboardList, 
   Menu, 
-  X, 
+  X, Briefcase,
+  UserCheck,
+  Star,
   ChevronRight 
 } from 'lucide-react';
 
@@ -17,13 +19,15 @@ const AdminNavbar = ({ activeTab, onTabClick }) => {
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
-
   const navItems = [
     { id: 'dashboard', path: '/admin', icon: <LayoutDashboard size={18} />, label: 'Dashboard' },
     { id: 'users', path: '/admin/users', icon: <Users size={18} />, label: 'Users' },
     { id: 'contacts', path: '/admin/contacts', icon: <MessageSquare size={18} />, label: 'Contacts' },
-    { id: 'services', path: '/admin/services', icon: <ClipboardList size={18} />, label: 'Services' }
+    { id: 'services', path: '/admin/services', icon: <Briefcase size={18} />, label: 'Services' },
+    { id: 'team', path: '/admin/team', icon: <UserCheck size={18} />, label: 'Team' },
+    { id: 'testimonials', path: '/admin/testimonials', icon: <Star size={18} />, label: 'Testimonials' },
   ];
+  
 
   // Handle navigation click with both router and active tab update
   const handleNavClick = (tabId) => {
@@ -36,7 +40,7 @@ const AdminNavbar = ({ activeTab, onTabClick }) => {
   };
 
   return (
-    <nav className="bg-gradient-to-r sticky top-0 from-blue-800 to-blue-900 shadow-lg">
+    <nav className="bg-gradient-to-r sticky top-16 z-10 from-blue-800 to-blue-900 shadow-lg">
       {/* Desktop Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">

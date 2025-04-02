@@ -27,4 +27,20 @@ router.route("/services/:serviceId").get(adminController.fetchServiceById);
 
 
 
+router.get("/team", adminController.fetchTeamMembers);
+router.post("/team", adminController.createTeamMember);
+router.get("/team/:id", adminController.fetchTeamMemberById); // Fixed double slash issue
+router.put("/team/:id", adminController.updateTeamMember);
+router.delete("/team/:id", adminController.deleteTeamMember);
+
+
+// Testimonial routes
+router.get('/testimonials',adminController.fetchTestimonials);
+router.post('/testimonials', adminController.createTestimonial);
+router.get('/testimonials/:id', adminController.fetchTestimonialById);
+router.put('/testimonials/:id', adminController.updateTestimonial);
+router.delete('/testimonials/:id', adminController.deleteTestimonial);
+
+
+
 module.exports = router;

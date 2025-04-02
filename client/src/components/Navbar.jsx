@@ -4,12 +4,15 @@ import { useAuth } from "../store/auth";
 import logo from "../assets/myidemy-logo.png"; // Make sure this path matches your actual logo path
 
 const Navbar = () => {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, userData } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Check if user is admin
+  const isAdmin = userData && userData.isAdmin === true;
 
   return (
     <nav className="bg-white sticky top-0 py-4 px-6 shadow-sm z-50">
@@ -92,6 +95,21 @@ const Navbar = () => {
               <span>Contact</span>
             </NavLink>
           </li>
+
+          {isLoggedIn && isAdmin && (
+            <li>
+              <NavLink
+                to="/admin"
+                className={({ isActive }) =>
+                  isActive
+                    ? "flex items-center text-blue-600 font-medium"
+                    : "flex items-center text-gray-600 hover:text-blue-500 transition-colors"
+                }
+              >
+                <span>Admin Panel</span>
+              </NavLink>
+            </li>
+          )}
 
           {isLoggedIn ? (
             <li>
@@ -188,6 +206,23 @@ const Navbar = () => {
               <span>Contact</span>
             </NavLink>
           </li>
+
+          {/* Admin Panel link for mobile */}
+          {isLoggedIn && isAdmin && (
+            <li>
+              <NavLink
+                to="/admin"
+                className={({ isActive }) =>
+                  isActive
+                    ? "block text-blue-600 font-medium py-1"
+                    : "block text-gray-600 hover:text-blue-500 transition-colors py-1"
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span>Admin Panel</span>
+              </NavLink>
+            </li>
+          )}
 
           {isLoggedIn ? (
             <li>

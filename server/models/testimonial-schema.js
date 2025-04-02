@@ -35,4 +35,5 @@ const TestimonialSchema = new mongoose.Schema({
   }
 });
 
+// Export the model directly
 module.exports = mongoose.model('Testimonial', TestimonialSchema);
